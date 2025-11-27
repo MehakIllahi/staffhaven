@@ -3,7 +3,7 @@ import React from "react";
 // A single-file React component using Bootstrap's container / row / col
 // It references the uploaded image at the provided local path.
 
-const heroImage = "../../../public/imgg3.jpg";
+const heroImage = "imgg3.jpg";
 
 export default function HiringSection() {
   return (
