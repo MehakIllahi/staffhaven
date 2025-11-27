@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
 
-import imgMain from "../../assets/img4.jpg"; // big image
-import imgTop from "../../assets/img2.jpg"; // top small image
-import imgBottom from "../../assets/img5.jpg"; // bottom small image
+import imgMain from "../../assets/img4.svg"; // big image
+import imgTop from "../../assets/img2.svg"; // top small image
+import imgBottom from "../../assets/img5.svg"; // bottom small image
 
 function WhyStaffHaven() {
   return (

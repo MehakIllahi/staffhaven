@@ -21,11 +21,7 @@ export default function Header() {
             className="navbar-brand d-flex align-items-center gap-2 text-white"
             to="/"
           >
-            <img
-              src={process.env.PUBLIC_URL + "/logo.jpg"}
-              alt="Logo"
-              style={{ height: "100px" }}
-            />
+            <img src={logo} alt="Logo" style={{ height: "100px" }} />
           </Link>
 
           {/* Toggler */}
