@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import FloatingTail from "../Floatingtail/FloatingTail";
+
 const Hero = () => {
   return (
     <>

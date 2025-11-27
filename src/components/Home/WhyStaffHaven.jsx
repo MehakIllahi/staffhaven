@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import ProgressiveImage from "../Imageloader/ProgressiveImage";
 
-// replace these with your actual image imports
-import imgMain from "/public/img4.jpg"; // big image
-import imgTop from "/public/img2.jpg"; // top small image
-import imgBottom from "/public/img3.jpg"; // bottom small image
+import imgMain from "../../assets/img4.jpg"; // big image
+import imgTop from "../../assets/img2.jpg"; // top small image
+import imgBottom from "../../assets/img5.jpg"; // bottom small image
 
 function WhyStaffHaven() {
   return (
@@ -78,7 +78,7 @@ function WhyStaffHaven() {
                   className="d-flex flex-column"
                   style={{ gap: "0.75rem" }}
                 >
-                  <img
+                  <ProgressiveImage
                     src={imgTop}
                     alt="Team 1"
                     style={{
@@ -88,7 +88,7 @@ function WhyStaffHaven() {
                       flex: 1,
                     }}
                   />
-                  <img
+                  <ProgressiveImage
                     src={imgBottom}
                     alt="Team 2"
                     style={{

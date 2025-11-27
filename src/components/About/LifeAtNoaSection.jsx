@@ -1,9 +1,9 @@
 // LifeAtNoaSection.js
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import ProgressiveImage from "../Imageloader/ProgressiveImage";
 // use your own image file here
-import lifeImage from "../../../public/img3.jpg"; // change path/name
+import lifeImage from "../../assets/img14.jpg"; // change path/name
 
 const LifeAtNoaSection = () => {
   return (
@@ -13,7 +13,7 @@ const LifeAtNoaSection = () => {
           <Row className="g-0">
             {/* LEFT: IMAGE */}
             <Col md={6}>
-              <img
+              <ProgressiveImage
                 src={lifeImage}
                 alt="Life at Noa"
                 style={{

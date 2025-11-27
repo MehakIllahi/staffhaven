@@ -1,64 +1,79 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { Row, Col, Card, Button, Container } from "react-bootstrap";
+import img21 from "../../assets/img21.jpg"; // top small image
+import img20 from "../../assets/img20.jpg";
+import img19 from "../../assets/img19.jpg"; // top small image
+import img22 from "../../assets/img22.jpg";
+import img23 from "../../assets/img23.jpg";
+import img24 from "../../assets/img24.jpg";
 
-const cardsData = [
-  {
-    title: "Recruitment Services",
-    text: "We help you find the right talent quickly and efficiently.",
-  },
-  {
-    title: "HR Consulting",
-    text: "Get expert advice for building strong HR processes.",
-  },
-  {
-    title: "Training & Development",
-    text: "Upskill your workforce with custom training programs.",
-  },
-  {
-    title: "Payroll Management",
-    text: "Accurate and timely payroll processing for your team.",
-  },
-  {
-    title: "Background Verification",
-    text: "Thorough candidate verification for safe hiring.",
-  },
-  {
-    title: "Contract Staffing",
-    text: "Flexible staffing options for short and long-term projects.",
-  },
-  {
-    title: "Onboarding Support",
-    text: "Smooth onboarding experience for new joinees.",
-  },
-  {
-    title: "Performance Management",
-    text: "Tools and processes to track employee performance.",
-  },
-];
+const Serviceblog = () => {
+  const posts = [
+    {
+      image: img21,
+      title: "Terraform in the UK – Still Critical, But Not a Silver Bullet",
+      date: "November 14, 2025",
+      tag: "DevOps",
+    },
+    {
+      image: img20,
+      title: "Hugging Face – Noa Recruitment Newsletter – November 2025",
+      date: "November 03, 2025",
+      tag: "Recruitment",
+    },
+    {
+      image: img22,
+      title: "Where JavaScript Stands in the UK Right Now",
+      date: "October 15, 2025",
+      tag: "JavaScript",
+    },
+    {
+      image: img19,
+      title: "Where JavaScript Stands in the UK Right Now",
+      date: "October 15, 2025",
+      tag: "JavaScript",
+    },
+    {
+      image: img23,
+      title: "Where JavaScript Stands in the UK Right Now",
+      date: "October 15, 2025",
+      tag: "JavaScript",
+    },
+    {
+      image: img24,
+      title: "Where JavaScript Stands in the UK Right Now",
+      date: "October 15, 2025",
+      tag: "JavaScript",
+    },
+  ];
 
-function Serviceblog() {
   return (
-    <Container className="py-5">
-      <h2 className="mb-4 text-center">Our Services</h2>
-      <Row className="g-4">
-        {cardsData.map((card, index) => (
-          <Col key={index} xs={12} sm={6} md={4} lg={3}>
-            <Card className="h-100 shadow-sm border-0">
-              {/* Replace with your own image */}
-              {/* <Card.Img variant="top" src={yourImage} /> */}
-              <Card.Body className="d-flex flex-column">
-                <Card.Title>{card.title}</Card.Title>
-                <Card.Text className="flex-grow-1 text-muted">
-                  {card.text}
-                </Card.Text>
-                <Button
-                  variant="primary"
-                  size="sm"
-                  className="mt-2 align-self-start"
+    <Container>
+      <Row className="g-4 m-4">
+        {posts.map((post, index) => (
+          <Col md={4} key={index}>
+            <Card className="shadow-sm border-0 rounded-4 overflow-hidden">
+              <Card.Img
+                variant="top"
+                src={post.image}
+                style={{ height: "200px", objectFit: "cover" }}
+              />
+
+              <Card.Body className="p-4">
+                <Card.Title
+                  className="fw-semibold"
+                  style={{ fontSize: "1.25rem" }}
                 >
-                  Learn more
+                  {post.title}
+                </Card.Title>
+
+                <p className="text-muted mt-3 mb-4">{post.date}</p>
+
+                <Button
+                  variant="light"
+                  className="rounded-pill px-4 py-2 fw-semibold border"
+                >
+                  {post.tag}
                 </Button>
               </Card.Body>
             </Card>
@@ -67,6 +82,6 @@ function Serviceblog() {
       </Row>
     </Container>
   );
-}
+};
 
 export default Serviceblog;

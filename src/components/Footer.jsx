@@ -76,15 +76,10 @@ const Footer = () => {
                   color: "#ffffff",
                 }}
               >
-                Hire Talent
+                Company
               </h6>
 
-              {[
-                "Product Managers/Owners",
-                "Project Manager",
-                "Python",
-                "Software Test Automation",
-              ].map((item) => (
+              {["Home", "Services", "Hire Talent"].map((item) => (
                 <p key={item} style={{ fontSize: "14px", marginBottom: "8px" }}>
                   <a
                     href="#!"
@@ -106,25 +101,24 @@ const Footer = () => {
                   color: "#ffffff",
                 }}
               >
-                Hire Talent
+                Legal & Compliance
               </h6>
 
-              {[
-                "Presales",
-                "DevOps",
-                ".NET",
-                "JavaScript Developer",
-                "PHP",
-              ].map((item) => (
-                <p key={item} style={{ fontSize: "14px", marginBottom: "8px" }}>
-                  <a
-                    href="#!"
-                    style={{ color: "#ffffff", textDecoration: "none" }}
+              {["Cookie Policy", "Terms of use", "Privacy Policy", "About"].map(
+                (item) => (
+                  <p
+                    key={item}
+                    style={{ fontSize: "14px", marginBottom: "8px" }}
                   >
-                    {item}
-                  </a>
-                </p>
-              ))}
+                    <a
+                      href="#!"
+                      style={{ color: "#ffffff", textDecoration: "none" }}
+                    >
+                      {item}
+                    </a>
+                  </p>
+                )
+              )}
             </Col>
           </Row>
         </Container>
@@ -153,22 +147,10 @@ const Footer = () => {
               >
                 <span>© 2025 StaffHaven</span>
                 <a
-                  href="#privacy"
-                  style={{ color: "#ffffff", textDecoration: "none" }}
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#cookie"
-                  style={{ color: "#ffffff", textDecoration: "none" }}
-                >
-                  Cookie Policy
-                </a>
-                <a
                   href="#agency"
                   style={{ color: "#ffffff", textDecoration: "none" }}
                 >
-                  Designed by London Web Agency
+                  Designed by Mehak Illahi
                 </a>
               </div>
             </Col>

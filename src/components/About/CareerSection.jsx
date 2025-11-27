@@ -1,12 +1,12 @@
 // AboutSection.js
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import ProgressiveImage from "../Imageloader/ProgressiveImage";
 // use your own images
-import imgTopLeft from "../../../public/img2.jpg";
-import imgTopRightCircle from "../../../public/img1.jpg";
-import imgBottomLeftCircle from "../../../public/img2.jpg";
-import imgBottomRight from "../../../public/img3.jpg";
+import imgTopLeft from "../../assets/img15.jpg";
+import imgTopRightCircle from "../../assets/img16.jpg";
+import imgBottomLeftCircle from "../../assets/img17.jpg";
+import imgBottomRight from "../../assets/img18.jpg";
 
 const AboutSection = () => {
   return (
@@ -105,7 +105,7 @@ const AboutSection = () => {
             >
               {/* top-left rectangle */}
               <div>
-                <img
+                <ProgressiveImage
                   src={imgTopLeft}
                   alt="Team meeting"
                   style={{
@@ -126,7 +126,7 @@ const AboutSection = () => {
                   justifySelf: "end",
                 }}
               >
-                <img
+                <ProgressiveImage
                   src={imgTopRightCircle}
                   alt="Workspace"
                   style={{
@@ -197,7 +197,7 @@ const AboutSection = () => {
                   borderRadius: "999px",
                 }}
               >
-                <img
+                <ProgressiveImage
                   src={imgBottomLeftCircle}
                   alt="Office hall"
                   style={{
@@ -211,7 +211,7 @@ const AboutSection = () => {
 
               {/* bottom-right rectangle */}
               <div>
-                <img
+                <ProgressiveImage
                   src={imgBottomRight}
                   alt="Developer"
                   style={{

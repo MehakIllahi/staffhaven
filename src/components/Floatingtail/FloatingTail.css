@@ -1,0 +1,35 @@
+.floating-tail-box {
+  position: relative;
+  display: inline-block;
+}
+
+.floating-tail-tooltip {
+  position: absolute;
+  padding: 10px 16px;
+  background: black;
+  color: white;
+  border-radius: 12px;
+  font-size: 14px;
+  white-space: nowrap;
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* Tail (triangle) */
+.floating-tail-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.floating-tail-box:hover .floating-tail-tooltip {
+  opacity: 1;
+}

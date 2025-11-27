@@ -1,12 +1,12 @@
 // OurValuesSection.js
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import ProgressiveImage from "../Imageloader/ProgressiveImage";
 // replace with your own image imports
-import imgPositivity from "../../../public/img2.jpg";
-import imgCuriosity from "../../../public/img3.jpg";
-import imgCommercial from "../../../public/img1.jpg";
-import imgGettingDone from "../../../public/img3.jpg";
+import imgPositivity from "../../assets/imgg1.jpg";
+import imgCuriosity from "../../assets/imgg2.jpg";
+import imgCommercial from "../../assets/imgg3.jpg";
+import imgGettingDone from "../../assets/img7.jpg";
 
 const valuesData = [
   {
@@ -134,7 +134,7 @@ const OurValuesSection = () => {
                 boxShadow: "0 18px 40px rgba(0,0,0,0.15)",
               }}
             >
-              <img
+              <ProgressiveImage
                 src={activeValue.image}
                 alt={activeValue.title}
                 style={{

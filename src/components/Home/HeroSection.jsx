@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import bannerimg from "/bannerimg2.jpg";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -36,20 +37,21 @@ function HeroSection() {
                 We pair talented recruiters with proprietary AI to source with
                 precision, deliver better candidates, and help you hire faster.
               </p>
-
-              <button
-                style={{
-                  backgroundColor: "black",
-                  border: "none",
-                  padding: "0.75rem 2.5rem",
-                  borderRadius: "999px",
-                  fontWeight: 600,
-                  fontSize: "1rem",
-                  color: "white",
-                }}
-              >
-                Explore Services
-              </button>
+              <Link to={"/services"}>
+                <button
+                  style={{
+                    backgroundColor: "black",
+                    border: "none",
+                    padding: "0.75rem 2.5rem",
+                    borderRadius: "999px",
+                    fontWeight: 600,
+                    fontSize: "1rem",
+                    color: "white",
+                  }}
+                >
+                  Explore Services
+                </button>
+              </Link>
             </Col>
             <Col sm={3}></Col>
 

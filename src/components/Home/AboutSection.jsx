@@ -1,8 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
-import officeImg from "/img2.jpg"; // top small image
-import peopleImg from "/img3.jpg"; // bottom small image
+import ProgressiveImage from "../Imageloader/ProgressiveImage";
+import officeImg from "../../assets/img3.jpg"; // top small image
+import peopleImg from "../../assets/img7.jpg"; // bottom small image
+import { Link } from "react-router-dom";
 
 function AboutSection() {
   return (
@@ -58,39 +59,43 @@ function AboutSection() {
 
             {/* buttons */}
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <button
-                style={{
-                  padding: "0.9rem 1.9rem",
-                  borderRadius: "999px",
-                  border: "none",
-                  backgroundColor: "#4c52ff",
-                  color: "#fff",
-                  fontWeight: 600,
-                  fontSize: "0.95rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                }}
-              >
-                About Us <span>➜</span>
-              </button>
-
-              <button
-                style={{
-                  padding: "0.9rem 1.9rem",
-                  borderRadius: "999px",
-                  border: "1.5px solid #111",
-                  backgroundColor: "#fff",
-                  color: "#111",
-                  fontWeight: 600,
-                  fontSize: "0.95rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                }}
-              >
-                Join the Team <span>➜</span>
-              </button>
+              <Link to={"/about"} className="text-decoration-none">
+                <button
+                  className=""
+                  style={{
+                    padding: "0.9rem 1.9rem",
+                    borderRadius: "999px",
+                    border: "none",
+                    backgroundColor: "#004952",
+                    color: "#fff",
+                    fontWeight: 600,
+                    fontSize: "0.95rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
+                >
+                  About Us <span>➜</span>
+                </button>
+              </Link>
+              <Link to={"/hire-talent"} className="text-decoration-none">
+                <button
+                  style={{
+                    padding: "0.9rem 1.9rem",
+                    borderRadius: "999px",
+                    border: "1.5px solid #004952",
+                    backgroundColor: "#fff",
+                    color: "#004952",
+                    fontWeight: 600,
+                    fontSize: "0.95rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
+                >
+                  Hire Talent <span>➜</span>
+                </button>
+              </Link>
             </div>
           </Col>
 
@@ -108,7 +113,7 @@ function AboutSection() {
                 overflow: "hidden",
               }}
             >
-              <img
+              <ProgressiveImage
                 src={officeImg}
                 alt="Office"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -128,7 +133,7 @@ function AboutSection() {
                 backgroundColor: "#fff",
               }}
             >
-              <img
+              <ProgressiveImage
                 src={peopleImg}
                 alt="Team"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
