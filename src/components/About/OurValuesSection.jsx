@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
 // replace with your own image imports
-import imgPositivity from "../../assets/imgg1.jpg";
-import imgCuriosity from "../../assets/imgg2.jpg";
-import imgCommercial from "../../assets/imgg3.jpg";
+import imgPositivity from "../../assets/img1.jpg";
+import imgCuriosity from "../../assets/img2.jpg";
+import imgCommercial from "../../assets/img3.jpg";
 import imgGettingDone from "../../assets/img7.jpg";
 
 const valuesData = [
