@@ -74,7 +74,7 @@ function OurServices() {
   const iconStyle = {
     fontSize: "2.2rem",
     marginBottom: "1.5rem",
-    color: "#4c6fff", // your primary blue
+    color: "#004952", // your primary blue
   };
 
   const titleStyle = {

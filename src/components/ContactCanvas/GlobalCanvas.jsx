@@ -24,7 +24,7 @@ export default function GlobalCanvas() {
           style={{ background: "#f8f9fa" }}
         >
           <i className="bi bi-envelope-fill fs-4 text-primary"></i>
-          <h5 className="mt-2 mb-0">info@thisisnoa.com</h5>
+          <h5 className="mt-2 mb-0">Hr@staffhavensolution.com</h5>
         </div>
 
         <div
@@ -32,7 +32,7 @@ export default function GlobalCanvas() {
           style={{ background: "#f8f9fa" }}
         >
           <i className="bi bi-telephone-fill fs-4 text-primary"></i>
-          <h5 className="mt-2 mb-0">01908 010390</h5>
+          <h5 className="mt-2 mb-0">1(469)795-1858</h5>
         </div>
 
         <p className="mt-4 text-muted">We're here to help — anytime!</p>

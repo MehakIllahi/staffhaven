@@ -18,8 +18,8 @@ function HiringSolutions() {
               style={{
                 fontSize: "2rem",
                 fontWeight: 700,
-                color: "#003366",
               }}
+              className="text-primary-custom "
             >
               Flexible Hiring Solutions Tailored to Your Specific Needs
             </h2>
@@ -32,7 +32,7 @@ function HiringSolutions() {
           <Col md={4} className="mb-4">
             <div>
               <div className="mb-3">
-                <FiUserCheck size={60} style={{ color: "#0052cc" }} />
+                <FiUserCheck size={60} className="text-primary-custom " />
               </div>
               <h3
                 style={{
@@ -56,7 +56,7 @@ function HiringSolutions() {
           <Col md={4} className="mb-4">
             <div>
               <div className="mb-3">
-                <FiCalendar size={60} style={{ color: "#0052cc" }} />
+                <FiCalendar size={60} className="text-primary-custom " />
               </div>
               <h3
                 style={{
@@ -81,7 +81,7 @@ function HiringSolutions() {
           <Col md={4} className="mb-4">
             <div>
               <div className="mb-3">
-                <FiClock size={60} style={{ color: "#0052cc" }} />
+                <FiClock size={60} className="text-primary-custom " />
               </div>
               <h3
                 style={{

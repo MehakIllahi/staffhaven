@@ -27,7 +27,7 @@ export function SolutionSection() {
               Oh, and we charge fairly and openly.
             </p>
 
-            <button className="btn btn-primary rounded-pill px-4 py-2">
+            <button className="bg-primary-custom rounded-pill px-4 py-2">
               Get in touch →
             </button>
           </div>

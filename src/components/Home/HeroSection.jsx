@@ -40,14 +40,13 @@ function HeroSection() {
               <Link to={"/services"}>
                 <button
                   style={{
-                    backgroundColor: "black",
                     border: "none",
                     padding: "0.75rem 2.5rem",
                     borderRadius: "999px",
                     fontWeight: 600,
                     fontSize: "1rem",
-                    color: "white",
                   }}
+                  className="bg-primary-custom"
                 >
                   Explore Services
                 </button>

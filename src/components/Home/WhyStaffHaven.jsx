@@ -18,15 +18,15 @@ function WhyStaffHaven() {
                 style={{
                   fontSize: "2.2rem",
                   fontWeight: 700,
-                  color: "#000",
+                  color: "white",
                   marginBottom: "1.5rem",
                 }}
               >
-                Why StaffHaven
+                Why STAFFHAVEN
               </h2>
               <p
                 style={{
-                  color: "#111",
+                  color: "white",
                   fontSize: "1rem",
                   lineHeight: 1.7,
                   maxWidth: "520px",
@@ -41,13 +41,13 @@ function WhyStaffHaven() {
               <button
                 style={{
                   marginTop: "2rem",
-                  backgroundColor: "#000",
+                  backgroundColor: "white",
                   border: "none",
                   padding: "0.75rem 2.5rem",
                   borderRadius: "999px",
                   fontWeight: 600,
                   fontSize: "1rem",
-                  color: "white",
+                  color: "black",
                 }}
               >
                 About Us
@@ -65,7 +65,7 @@ function WhyStaffHaven() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      borderRadius: "18px",
+                      borderRadius: "18px !important",
                       objectFit: "cover",
                       display: "block",
                     }}
@@ -78,22 +78,22 @@ function WhyStaffHaven() {
                   className="d-flex flex-column"
                   style={{ gap: "0.75rem" }}
                 >
-                  <ProgressiveImage
+                  <img
                     src={imgTop}
                     alt="Team 1"
                     style={{
                       width: "100%",
-                      borderRadius: "18px",
+                      borderRadius: "18px !important",
                       objectFit: "cover",
                       flex: 1,
                     }}
                   />
-                  <ProgressiveImage
+                  <img
                     src={imgBottom}
                     alt="Team 2"
                     style={{
                       width: "100%",
-                      borderRadius: "18px",
+                      borderRadius: "18px !important",
                       objectFit: "cover",
                       flex: 1,
                     }}

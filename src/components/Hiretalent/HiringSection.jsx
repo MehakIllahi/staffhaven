@@ -36,11 +36,11 @@ export default function HiringSection() {
               deliver the quality candidates.
             </p>
 
-            <div className="mt-4 d-flex gap-3">
-              <button className="btn btn-light rounded-pill px-4">
+            <div className="mt-4 d-flex gap-3 flex-wrap">
+              <button className="btn btn-light rounded-pill px-4 btn-hover">
                 We Can Help - Find Out How →
               </button>
-              <button className="btn btn-outline-light rounded-pill px-4">
+              <button className="btn btn-outline-light rounded-pill px-4 btn-hover">
                 Get in Touch →
               </button>
             </div>
@@ -96,7 +96,7 @@ export default function HiringSection() {
         </div>
       </div>
 
-      {/* Inline styles for the floating profile cards and responsive tweaks */}
+      {/* Inline styles for the floating profile cards, hover effects, and responsive tweaks */}
       <style>{`
         .profile-card {
           position: absolute;
@@ -104,6 +104,19 @@ export default function HiringSection() {
           border-radius: 8px;
           box-shadow: 0 6px 18px rgba(0,0,0,0.15);
           overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for profile cards */
+        .profile-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+        }
+
+        /* Hover effect for buttons */
+        .btn-hover:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         /* Position adjustments for smaller screens */
@@ -112,7 +125,7 @@ export default function HiringSection() {
           .profile-card { display: none; }
         }
 
-        /* keep buttons compact on mobile */
+        /* keep buttons and text responsive on medium screens */
         @media (max-width: 991px) {
           .display-5 { font-size: 2rem; }
         }
