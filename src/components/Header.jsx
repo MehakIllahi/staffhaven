@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import { Offcanvas } from "react-bootstrap";
 import logo from "/logo.jpg";
 import contactimg from "../assets/contactimg.png";
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // Mobile menu state
   const [show, setShow] = useState(false); // Offcanvas state
-
+  const [emailHover, setEmailHover] = useState(false);
+  const [phoneHover, setPhoneHover] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
@@ -105,15 +107,45 @@ export default function Header() {
             className="img-fluid rounded-4 shadow-sm mb-4"
           />
 
-          <p>
-            <a href="mailto:Hr@staffhavensolution.com">
-              Hr@staffhavensolution.com
-            </a>
-          </p>
+          <div className="d-flex flex-column gap-2">
+            {/* Email */}
+            <div
+              className={`d-flex align-items-center gap-2 rounded px-3 py-3 ${
+                emailHover ? "bg-primary-custom" : "bg-light text-black"
+              }`}
+              style={{ cursor: "pointer", transition: "0.3s" }}
+              onMouseEnter={() => setEmailHover(true)}
+              onMouseLeave={() => setEmailHover(false)}
+            >
+              <AiOutlineMail size={20} />
+              <a
+                href="mailto:Hr@staffhavensolution.com"
+                className="text-decoration-none"
+                style={{ color: emailHover ? "white" : "black" }}
+              >
+                hr@staffhavensolution.com
+              </a>
+            </div>
 
-          <p>
-            <a href="tel:14697951858">1 (469) 795-1858</a>
-          </p>
+            {/* Phone */}
+            <div
+              className={`d-flex align-items-center gap-2 rounded px-3 py-2 ${
+                phoneHover ? "bg-primary-custom" : "bg-light text-black"
+              }`}
+              style={{ cursor: "pointer", transition: "0.3s" }}
+              onMouseEnter={() => setPhoneHover(true)}
+              onMouseLeave={() => setPhoneHover(false)}
+            >
+              <AiOutlinePhone size={20} />
+              <a
+                href="tel:14697951858"
+                className="text-decoration-none"
+                style={{ color: phoneHover ? "white" : "black" }}
+              >
+                1 (469) 795-1858
+              </a>
+            </div>
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>
