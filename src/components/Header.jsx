@@ -6,63 +6,82 @@ import logo from "/logo.jpg";
 import contactimg from "../assets/contactimg.png";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [show, setShow] = useState(false);
-  const [emailHover, setEmailHover] = useState(false);
-  const [phoneHover, setPhoneHover] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-primary-custom">
         <div className="container d-flex align-items-center justify-content-between py-2">
-          <Link className="navbar-brand" to="/">
+          {/* LOGO */}
+          <Link className="navbar-brand" to="/" onClick={closeMenu}>
             <img src={logo} alt="Logo" style={{ height: "50px" }} />
           </Link>
 
-          {/* 🔥 MOBILE BURGER BUTTON */}
+          {/* MOBILE HAMBURGER */}
           <button
-            className="navbar-toggler"
+            className="navbar-toggler border-0"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMenu"
-            aria-controls="navMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            onClick={toggleMenu}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* MENU (DESKTOP + MOBILE) */}
-          <div className="collapse navbar-collapse" id="navMenu">
-            <ul className="navbar-nav mx-auto gap-3 text-center">
+          {/* MENU */}
+          <div className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}>
+            <ul className="navbar-nav mx-auto gap-3 text-center mt-3 mt-lg-0">
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/">
+                <Link
+                  className="nav-link text-white"
+                  to="/"
+                  onClick={closeMenu}
+                >
                   Home
                 </Link>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/hire-talent">
+                <Link
+                  className="nav-link text-white"
+                  to="/hire-talent"
+                  onClick={closeMenu}
+                >
                   Hire Talent
                 </Link>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/services">
+                <Link
+                  className="nav-link text-white"
+                  to="/services"
+                  onClick={closeMenu}
+                >
                   Service
                 </Link>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/about">
+                <Link
+                  className="nav-link text-white"
+                  to="/about"
+                  onClick={closeMenu}
+                >
                   About
                 </Link>
               </li>
             </ul>
 
+            {/* CTA BUTTON */}
             <div className="text-center mt-3 mt-lg-0">
               <button
                 className="btn btn-light px-4 rounded-pill fw-semibold"
-                onClick={handleShow}
+                onClick={() => {
+                  setShow(true);
+                  closeMenu();
+                }}
               >
                 Talk to us
               </button>
@@ -71,8 +90,8 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* OFFCANVAS (UNCHANGED) */}
-      <Offcanvas show={show} onHide={handleClose} placement="end">
+      {/* OFFCANVAS */}
+      <Offcanvas show={show} onHide={() => setShow(false)} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className="fw-bold fs-3">Let's Talk</Offcanvas.Title>
         </Offcanvas.Header>
