@@ -41,12 +41,11 @@ function HiringSolutions() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Engineering Consulting Services
+                Tailored Talent Solutions for Every Need
               </h3>
               <p style={{ color: "#4a4a4a", lineHeight: 1.6 }}>
-                We deliver expert engineering consulting solutions that help
-                organizations plan, design, and execute projects with confidence
-                and technical excellence.
+                We customize hiring strategies to match your company’s unique
+                goals and culture.
               </p>
             </div>
           </Col>
@@ -64,12 +63,11 @@ function HiringSolutions() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Project Consulting & Advisory
+                Project Planning & Execution Support
               </h3>
               <p style={{ color: "#4a4a4a", lineHeight: 1.6 }}>
-                Our project consulting services provide end-to-end advisory
-                support, ensuring the right strategy, resources, and execution
-                model for every engagement.
+                Guiding organizations to implement projects effectively, on
+                time, and within budget.
               </p>
             </div>
           </Col>
@@ -87,12 +85,11 @@ function HiringSolutions() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Permanent Staffing & Recruitment
+                Customized Recruitment Strategies
               </h3>
               <p style={{ color: "#4a4a4a", lineHeight: 1.6 }}>
-                We support long-term hiring by managing sourcing, screening, and
-                placement—helping organizations build stable, high-performing
-                teams.
+                We adapt our recruitment methods to meet the urgency, and
+                complexity of your hiring needs.
               </p>
             </div>
           </Col>

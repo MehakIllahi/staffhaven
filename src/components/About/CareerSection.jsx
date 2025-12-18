@@ -28,60 +28,43 @@ const AboutSection = () => {
                 fontWeight: 600,
               }}
             >
-              Let&apos;s elevate your
-              <br />
-              career!
+              Elevate Your Hiring with Staff Haven!
             </h1>
 
             <div style={{ fontSize: "15px", lineHeight: "1.6" }}>
               <p>
-                At Noa we have one mission: To help our customers find and hire
-                Simply Great People. It’s that simple.
+                At Staff Haven, our mission is simple: to help businesses find
+                and hire exceptional talent, quickly and efficiently.
               </p>
               <p>
-                Whether you need to hire your first Machine Learning engineer or
-                a Director of Software Engineering, we’ve got you covered.
+                Whether you’re looking to hire your first Machine Learning
+                engineer or a Director of Software Engineering, we’ve got the
+                expertise to match your needs.
               </p>
               <p>
-                Whether you need to make a one off hire or build an entire team
-                from the ground up we have a variety of tools and approaches to
-                make sure you get exactly the service you need.
+                From one-off hires to building entire teams from scratch, our
+                flexible solutions and tools ensure you get exactly the service
+                that fits your business.
               </p>
+              <p>
+                We provide actionable insights and data to help you refine your
+                hiring processes, streamline recruitment, and make better
+                decisions.
+              </p>
+              <p>
+                Tired of the “one-size-fits-all” approach from traditional
+                recruiters?
+                <strong>So are we.</strong>
+              </p>
+
               <p>
                 We can arm you with critical data to help you fine tune your
                 processes and optimise your hiring.
               </p>
+
               <p>
-                Fed up of the “one size fits all” approach of recruiters?{" "}
-                <strong>So are we.</strong>
-              </p>
-              <p>
-                That’s why we have three innovative solutions with fair and
-                clear pricing so you can find the best fit for your business.
-              </p>
-              <p>
-                We can arm you with critical data to help you fine tune your
-                processes and optimise your hiring.
-              </p>
-              <p>
-                Fed up of the “one size fits all” approach of recruiters?{" "}
-                <strong>So are we.</strong>
-              </p>
-              <p>
-                That’s why we have three innovative solutions with fair and
-                clear pricing so you can find the best fit for your business.
-              </p>{" "}
-              <p>
-                We can arm you with critical data to help you fine tune your
-                processes and optimise your hiring.
-              </p>
-              <p>
-                Fed up of the “one size fits all” approach of recruiters?{" "}
-                <strong>So are we.</strong>
-              </p>
-              <p>
-                That’s why we have three innovative solutions with fair and
-                clear pricing so you can find the best fit for your business.
+                With our team by your side, hiring becomes faster, smarter, and
+                stress-free.
               </p>
             </div>
           </Col>

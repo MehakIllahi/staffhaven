@@ -16,24 +16,22 @@ export default function HiringSection() {
               Hire Talent
             </small>
             <h1 className="display-5 fw-bold" style={{ lineHeight: 1.05 }}>
-              Struggling with
-              <br />
-              These Hiring
+              Facing Hiring
               <br />
               Challenges?
             </h1>
 
             <p className="mt-4 opacity-75">
-              Many of our clients feel overwhelmed by how long it takes to find
-              the right talent.
+              Many companies find themselves frustrated by the lengthy process
+              of sourcing the right talent.
             </p>
             <p className="opacity-75">
-              Others are shocked by the high costs of recruitment, wondering if
-              it's really worth the investment.
+              Others are concerned about the rising costs of recruitment and
+              question whether it’s truly a worthwhile investment.
             </p>
             <p className="opacity-75">
-              Some have even lost faith in their recruiters, unsure if they can
-              deliver the quality candidates.
+              Some have even grown doubtful about their recruiters, uncertain if
+              they can consistently deliver high-quality candidates.
             </p>
 
             <div className="mt-4 d-flex gap-3 flex-wrap">

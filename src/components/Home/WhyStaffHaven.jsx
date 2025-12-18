@@ -9,9 +9,9 @@ import imgBottom from "../../assets/img5.jpg"; // bottom small image
 function WhyStaffHaven() {
   return (
     <>
-      <section className="bg-primary-custom p-4">
+      <section className="bg-primary-custom" style={{ padding: "60px 20px" }}>
         <Container>
-          <Row className="align-items-center mb-2">
+          <Row className=" mb-2">
             {/* LEFT: content */}
             <Col md={6}>
               <h2
@@ -20,6 +20,7 @@ function WhyStaffHaven() {
                   fontWeight: 700,
                   color: "white",
                 }}
+                className="mb-4"
               >
                 Why STAFFHAVEN
               </h2>
@@ -30,17 +31,19 @@ function WhyStaffHaven() {
                   lineHeight: 1.7,
                   maxWidth: "420px",
                 }}
+                className="mb-2"
               >
-                StaffHaven was established to address the evolving talent needs
-                of businesses across industries. As a dedicated recruitment
-                partner, we combine deep market insight, strong industry
-                experience, and a commitment to exceptional service to help
-                organizations build high-performing teams. Our expertise spans
-                staffing solutions, talent acquisition strategy, and workforce
-                consulting—ensuring that every client finds the right people,
-                and every candidate finds the right opportunity. With a focus on
-                quality, integrity, and personalized support, StaffHaven is your
-                trusted partner for sustainable growth and workforce success.
+                StaffHaven was founded to meet the evolving talent needs of
+                businesses across industries. As a dedicated recruitment
+                partner, we combine market insight, industry experience, and a
+                commitment to exceptional service to help organizations build
+                high-performing teams. <br />
+                <br />
+                Our expertise covers staffing solutions, talent acquisition
+                strategies, and ensuring candidates find the right
+                opportunities. With a focus on quality, integrity, and
+                personalized support, StaffHaven is your trusted partner for
+                sustainable growth and workforce success.
               </p>
 
               <button
@@ -60,7 +63,7 @@ function WhyStaffHaven() {
             </Col>
 
             {/* RIGHT: images (1 big + 2 stacked) */}
-            <Col md={6} className="mb-4 mb-md-0">
+            <Col md={6} className="mb-4 ">
               <Row className="g-3">
                 {/* Big image */}
                 <Col md={7}>
@@ -70,7 +73,7 @@ function WhyStaffHaven() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      borderRadius: "18px !important",
+                      borderRadius: "20px",
                       objectFit: "cover",
                       display: "block",
                     }}
@@ -88,7 +91,7 @@ function WhyStaffHaven() {
                     alt="Team 1"
                     style={{
                       width: "100%",
-                      borderRadius: "18px !important",
+                      borderRadius: "20px",
                       objectFit: "cover",
                       flex: 1,
                     }}
@@ -98,7 +101,7 @@ function WhyStaffHaven() {
                     alt="Team 2"
                     style={{
                       width: "100%",
-                      borderRadius: "18px !important",
+                      borderRadius: "20px",
                       objectFit: "cover",
                       flex: 1,
                     }}

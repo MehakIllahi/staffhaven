@@ -96,24 +96,28 @@ export default function Header() {
         </Offcanvas.Header>
 
         <Offcanvas.Body className="text-center d-flex flex-column justify-content-center">
-          <h2 className="fw-bold mb-4">Ready. Steady. Hire.</h2>
-          <p className="text-muted mb-4">
+          <h2 className="fw-bold ">Ready. Steady. Hire.</h2>
+          <p className="text-muted ">
             Stop wasting time — let's find you some talent!
           </p>
 
           <img
             src={contactimg}
             alt="Talent illustration"
-            className="img-fluid rounded-4 shadow-sm mb-4"
+            className="img-fluid rounded-4 shadow-sm mb-2"
           />
 
           <div className="d-flex flex-column gap-2">
             {/* Email */}
             <div
-              className={`d-flex align-items-center gap-2 rounded px-3 py-3 ${
+              className={`d-flex justify-content-center align-items-center gap-2 rounded px-3 py-3 ${
                 emailHover ? "bg-primary-custom" : "bg-light text-black"
               }`}
-              style={{ cursor: "pointer", transition: "0.3s" }}
+              style={{
+                cursor: "pointer",
+                transition: "0.3s",
+                minWidth: "250px",
+              }}
               onMouseEnter={() => setEmailHover(true)}
               onMouseLeave={() => setEmailHover(false)}
             >
@@ -129,10 +133,14 @@ export default function Header() {
 
             {/* Phone */}
             <div
-              className={`d-flex align-items-center gap-2 rounded px-3 py-2 ${
+              className={`d-flex justify-content-center align-items-center gap-2 rounded px-3 py-3 ${
                 phoneHover ? "bg-primary-custom" : "bg-light text-black"
               }`}
-              style={{ cursor: "pointer", transition: "0.3s" }}
+              style={{
+                cursor: "pointer",
+                transition: "0.3s",
+                minWidth: "250px",
+              }}
               onMouseEnter={() => setPhoneHover(true)}
               onMouseLeave={() => setPhoneHover(false)}
             >

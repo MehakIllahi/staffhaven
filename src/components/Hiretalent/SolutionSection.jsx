@@ -11,20 +11,22 @@ export function SolutionSection() {
           {/* Left: Text */}
           <div className="col-md-6 mb-4 mb-md-0">
             <h2 className="fw-bold display-6 mb-4">
-              But there is a solution...
+              But there’s a better way…
             </h2>
 
-            <p className="text-muted mb-3">We breathe tech recruiting.</p>
+            <p className="text-muted mb-3">
+              Recruiting is what we live and breathe.
+            </p>
 
             <p className="text-muted mb-3">
-              Our team of specialists are constantly nurturing their talent
-              pools so that when our customers need us we are able to swiftly
-              and accurately present a tailored shortlist of engaged and fully
-              qualified talent.
+              Our team of experts continuously cultivates their talent networks,
+              so when you need the right people, we can quickly deliver a
+              carefully curated shortlist of engaged, highly qualified
+              candidates.
             </p>
 
             <p className="text-muted mb-4">
-              Oh, and we charge fairly and openly.
+              And yes — our pricing is transparent and fair.
             </p>
 
             <button className="bg-primary-custom rounded-pill px-4 py-2">

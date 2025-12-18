@@ -4,37 +4,37 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
 // replace with your own image imports
 import imgPositivity from "../../assets/img1.jpg";
-import imgCuriosity from "../../assets/img2.jpg";
+import imgCuriosity from "../../assets/img14.jpg";
 import imgCommercial from "../../assets/img3.jpg";
 import imgGettingDone from "../../assets/img7.jpg";
 
 const valuesData = [
   {
     id: 1,
-    title: "Positivity",
+    title: "Optimism",
     description:
-      "To us, it means being engaged with our work, staying open-minded, and facing challenges in a process-driven and focused manner.",
+      "We tackle every challenge with a positive mindset, staying proactive and solution-oriented for both clients and candidates.",
     image: imgPositivity,
   },
   {
     id: 2,
     title: "Curiosity",
     description:
-      "We ask questions, explore new ideas and constantly look for better ways to do things.",
+      "We are constantly exploring new ways to find talent, understand industry trends, and improve the recruitment process.",
     image: imgCuriosity,
   },
   {
     id: 3,
-    title: "Commercial Mindset",
+    title: "Business Focus",
     description:
-      "We think long-term, focus on value, and make decisions that help our customers and our business grow.",
+      "We prioritize the client’s objectives, making strategic hiring decisions that drive growth and deliver real value.",
     image: imgCommercial,
   },
   {
     id: 4,
-    title: "Getting Things Done",
+    title: "Execution",
     description:
-      "We take ownership, move quickly and follow through to deliver real results.",
+      "We move quickly and efficiently, ensuring that every hire and project is completed with precision and impact.",
     image: imgGettingDone,
   },
 ];

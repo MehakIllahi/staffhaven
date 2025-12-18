@@ -143,15 +143,10 @@ const Footer = () => {
                   gap: "16px",
                   fontSize: "13px",
                   color: "#ffffff",
+                  justifyContent: "Center",
                 }}
               >
-                <span>© 2025 StaffHaven</span>
-                <a
-                  href="#agency"
-                  style={{ color: "#ffffff", textDecoration: "none" }}
-                >
-                  Designed by Mehak Illahi
-                </a>
+                <span>©2025 Staff Haven | All Rights Reserved</span>
               </div>
             </Col>
           </Row>

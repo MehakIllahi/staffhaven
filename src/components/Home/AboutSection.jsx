@@ -19,7 +19,7 @@ function AboutSection() {
                 marginBottom: "1.5rem",
               }}
             >
-              Join StaffHaven?
+              Join STAFFHAVEN?
             </h2>
 
             <p
