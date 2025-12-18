@@ -7,31 +7,37 @@ const reviews = [
     text: "Brook is lovely, super quick at responding and great at sorting out both the client work and the accounting side of things.",
     name: "Evelin",
     role: "Candidate",
+    image: "/images/reviews/evelin.jpg",
   },
   {
     text: "Really nice to work with getting a new contract. Great communication and follow up.",
     name: "Dainyika",
     role: "Candidate",
+    image: "/images/reviews/dainyika.jpg",
   },
   {
     text: "Fantastic support from start to finish. I always felt informed and looked after.",
-    name: "ANIKA",
+    name: "Anika",
     role: "Candidate",
+    image: "/images/reviews/anika.jpg",
   },
   {
     text: "Professional, friendly and efficient – couldn’t ask for more from a recruiter.",
     name: "Jordan",
     role: "Candidate",
+    image: "/images/reviews/jordan.jpg",
   },
   {
     text: "Made the whole process so smooth and stress-free. Highly recommended.",
     name: "Sam",
     role: "Candidate",
+    image: "/images/reviews/sam.jpg",
   },
   {
     text: "They really listened to what I wanted and found the perfect role.",
     name: "Priya",
     role: "Candidate",
+    image: "/images/reviews/priya.jpg",
   },
 ];
 
@@ -41,16 +47,16 @@ function ReviewSlider() {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // 1 slide = 3 reviews
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     appendDots: (dots) => (
       <div style={{ marginTop: "1.5rem" }}>
-        <ul style={{ margin: 0 }}> {dots} </ul>
+        <ul style={{ margin: 0 }}>{dots}</ul>
       </div>
     ),
-    customPaging: (i) => (
+    customPaging: () => (
       <div
         style={{
           width: "8px",
@@ -62,7 +68,7 @@ function ReviewSlider() {
     ),
   };
 
-  // group reviews into chunks of 3
+  // Group reviews into chunks of 3
   const slides = [];
   for (let i = 0; i < reviews.length; i += 3) {
     slides.push(reviews.slice(i, i + 3));
@@ -70,7 +76,15 @@ function ReviewSlider() {
 
   const cardStyle = {
     textAlign: "center",
-    padding: "1.5rem 2rem",
+    padding: "2rem",
+  };
+
+  const avatarStyle = {
+    width: "70px",
+    height: "70px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    marginBottom: "1rem",
   };
 
   const starsStyle = {
@@ -102,11 +116,21 @@ function ReviewSlider() {
                 {group.map((review, i) => (
                   <Col md={4} key={i}>
                     <div style={cardStyle}>
+                      <img
+                        src={review.image}
+                        alt={review.name}
+                        style={avatarStyle}
+                      />
+
                       <div style={starsStyle}>★★★★★</div>
+
                       <p style={textStyle}>{review.text}</p>
+
                       <p style={nameStyle}>
                         {review.name},{" "}
-                        <span style={{ fontWeight: 700 }}>{review.role}</span>
+                        <span style={{ fontWeight: 600, color: "#555" }}>
+                          {review.role}
+                        </span>
                       </p>
                     </div>
                   </Col>

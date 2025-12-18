@@ -7,68 +7,76 @@ import {
   TbCircuitChangeover,
   TbMessageCircle,
   TbChecklist,
+  TbUsers,
+  TbUserCheck,
+  TbBriefcase,
 } from "react-icons/tb";
 
 function OurServices() {
   const servicesTop = [
     {
-      icon: <TbLayoutGrid />, // replace with real icon
-      title: "We Provide an Individual Approach",
+      icon: <TbLayoutGrid />,
+      title: "We Provide a Personalized Recruitment Approach",
       text: [
-        "We treat everyone exactly as they should be – like an individual.",
-        "You can be sure that we’ll respect your preferences and ensure you’re happy every step of the process.",
+        "At StaffHaven, we understand that every hiring requirement is unique and deserves a tailored strategy.",
+        "Our recruitment process is designed around your business goals, role expectations, and company culture.",
+        "This individualized approach leads to better talent alignment and long-term hiring success.",
       ],
     },
     {
       icon: <TbLayersSubtract />,
-      title: "We Provide a Personable Service",
+      title: "We Provide Human-Centered Staffing Services",
       text: [
-        "Recruiters are people too, contrary to popular belief!",
-        "We know that, as recruiters, we’ve got a bad rap. At StaffHaven, we actively work to change it.",
-        "Our team values personal connection with clients and candidates alike and we communicate respectfully and clearly without sacrificing friendliness.",
+        "Recruitment is ultimately about people, not just filling positions. We focus on meaningful relationships.",
+        "StaffHaven delivers a professional, transparent, and approachable staffing experience for clients and candidates.",
+        "Our team communicates clearly while maintaining a supportive and respectful process.",
       ],
     },
     {
       icon: <TbShieldCheck />,
-      title: "We Champion Equal Opportunities",
+      title: "We Provide Equal Opportunity Hiring",
       text: [
-        "Our customers want only the best talent – and that means variety.",
-        "That is why we, along with our customers, put diversity and inclusion at the heart of our hiring practices.",
+        "We believe that strong organizations are built through diverse and inclusive hiring practices.",
+        "StaffHaven actively promotes fair, unbiased, and ethical recruitment for every role.",
+        "This commitment allows businesses to access broader talent pools and build stronger teams.",
       ],
     },
   ];
 
   const servicesBottom = [
     {
-      icon: <TbCircuitChangeover />,
-      title: "We're a Team That Works For You",
+      icon: <TbUsers />,
+      title: "We Provide Contract & Temporary Staffing",
       text: [
-        "Our team is focused on one thing: finding you the best career.",
-        "That means that you’ll have an entire team of talented recruiters working to connect you with the best opportunities.",
+        "Changing business demands require flexible workforce solutions. Our contract staffing meets short-term needs.",
+        "We supply skilled professionals who can contribute immediately to projects and operations.",
+        "This flexibility helps organizations scale efficiently without long-term obligations.",
       ],
     },
     {
-      icon: <TbMessageCircle />,
-      title: "We Value Feedback",
+      icon: <TbUserCheck />,
+
+      title: "We Provide Permanent Hiring Solutions",
       text: [
-        "We make mistakes and we get things wrong – but when we do, we work hard to put them right.",
-        "We always take the time to listen to feedback and adjust our practices.",
-        "This is why we have so many 5-star reviews!",
+        "Long-term success depends on hiring the right permanent talent. We manage the full recruitment lifecycle.",
+        "From sourcing to placement, StaffHaven ensures high-quality, reliable hires.",
+        "Our focus is on skill match, cultural fit, and long-term retention.",
       ],
     },
     {
-      icon: <TbChecklist />,
-      title: "We Support You",
+      icon: <TbBriefcase />,
+
+      title: "We Provide Recruitment Consulting & Advisory",
       text: [
-        "Our dedicated team works hard to find candidates the perfect careers. Then, we work even harder to ensure it lives up to expectations.",
-        "We’ll work closely with you during the onboarding and throughout the first six months to make sure your shiny new job stays just that… shiny.",
+        "Beyond staffing, we offer expert recruitment consulting to strengthen hiring strategies.",
+        "StaffHaven advises organizations on workforce planning and recruitment optimization.",
+        "Our consulting services help reduce hiring risks and improve overall talent outcomes.",
       ],
     },
   ];
 
   const cardStyle = {
-    backgroundColor: "#fafafa",
-    padding: "1.5rem 0px",
+    padding: "1.5rem 20px",
   };
 
   const iconStyle = {
@@ -93,7 +101,7 @@ function OurServices() {
   };
 
   return (
-    <section style={{ backgroundColor: "#fdfdfd", padding: "4rem 0" }}>
+    <section style={{ padding: "4rem 0" }} className="bg-light">
       <Container>
         {/* First row */}
         <h1>Our Services</h1>

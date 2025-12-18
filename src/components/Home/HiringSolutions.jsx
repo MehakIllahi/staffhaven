@@ -41,13 +41,12 @@ function HiringSolutions() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Pay Per Hire
+                Engineering Consulting Services
               </h3>
               <p style={{ color: "#4a4a4a", lineHeight: 1.6 }}>
-                Experience worry-free recruitment as our expert team manages the
-                entire process, from sourcing to screening and presenting
-                top-qualified candidates for your business. With our Pay Per
-                Hire model, you only pay for the talent you hire.
+                We deliver expert engineering consulting solutions that help
+                organizations plan, design, and execute projects with confidence
+                and technical excellence.
               </p>
             </div>
           </Col>
@@ -65,14 +64,12 @@ function HiringSolutions() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Pay Per Month
+                Project Consulting & Advisory
               </h3>
               <p style={{ color: "#4a4a4a", lineHeight: 1.6 }}>
-                Incorporate our skilled recruiters into your team as they work
-                closely with you to develop and implement talent acquisition
-                strategies that align with your company's objectives. With a
-                fixed monthly fee, we'll handle all your recruitment needs from
-                sourcing to onboarding.
+                Our project consulting services provide end-to-end advisory
+                support, ensuring the right strategy, resources, and execution
+                model for every engagement.
               </p>
             </div>
           </Col>
@@ -90,13 +87,12 @@ function HiringSolutions() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Pay Per Hour
+                Permanent Staffing & Recruitment
               </h3>
               <p style={{ color: "#4a4a4a", lineHeight: 1.6 }}>
-                Gain access to our experienced professionals on an hourly basis
-                with our Pay Per Hour model. Benefit from a range of flexible
-                consulting services, including talent strategy development,
-                onboarding, diversity and inclusion initiatives, and more.
+                We support long-term hiring by managing sourcing, screening, and
+                placement—helping organizations build stable, high-performing
+                teams.
               </p>
             </div>
           </Col>

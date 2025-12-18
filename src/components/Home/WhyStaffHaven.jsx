@@ -11,7 +11,7 @@ function WhyStaffHaven() {
     <>
       <section className="bg-primary-custom p-4">
         <Container>
-          <Row className="align-items-center">
+          <Row className="align-items-center mb-2">
             {/* LEFT: content */}
             <Col md={6}>
               <h2
@@ -19,7 +19,6 @@ function WhyStaffHaven() {
                   fontSize: "2.2rem",
                   fontWeight: 700,
                   color: "white",
-                  marginBottom: "1.5rem",
                 }}
               >
                 Why STAFFHAVEN
@@ -29,13 +28,19 @@ function WhyStaffHaven() {
                   color: "white",
                   fontSize: "1rem",
                   lineHeight: 1.7,
-                  maxWidth: "520px",
+                  maxWidth: "420px",
                 }}
               >
-                TP Greece Insurance Agent was created to meet the complex needs
-                of insurance businesses in the Greek and European market. As
-                part of TP GR, we bring operational experience, legal
-                understanding, and commitment to service excellence.
+                StaffHaven was established to address the evolving talent needs
+                of businesses across industries. As a dedicated recruitment
+                partner, we combine deep market insight, strong industry
+                experience, and a commitment to exceptional service to help
+                organizations build high-performing teams. Our expertise spans
+                staffing solutions, talent acquisition strategy, and workforce
+                consulting—ensuring that every client finds the right people,
+                and every candidate finds the right opportunity. With a focus on
+                quality, integrity, and personalized support, StaffHaven is your
+                trusted partner for sustainable growth and workforce success.
               </p>
 
               <button

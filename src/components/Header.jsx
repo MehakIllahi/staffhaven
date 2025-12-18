@@ -6,148 +6,117 @@ import logo from "/logo.jpg";
 import contactimg from "../assets/contactimg.png";
 
 export default function Header() {
-  const [show, setShow] = useState(false);
-  const [emailHover, setEmailHover] = useState(false);
-  const [phoneHover, setPhoneHover] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-primary-custom">
-        <div className="container d-flex align-items-center justify-content-between py-2">
+      {/* NAVBAR */}
+      <nav className="navbar bg-primary-custom py-2">
+        <div className="container d-flex justify-content-between align-items-center">
+          {/* Logo */}
           <Link className="navbar-brand" to="/">
-            <img src={logo} alt="Logo" style={{ height: "100px" }} />
+            <img src={logo} alt="Logo" style={{ height: "60px" }} />
           </Link>
 
-          <div className="collapse navbar-collapse" id="navMenu">
-            <ul className="navbar-nav mx-auto gap-3">
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/hire-talent">
-                  Hire Talent
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/services">
-                  Service
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/about">
-                  About
-                </Link>
-              </li>
-            </ul>
-
+          {/* Desktop Button */}
+          <div className="d-none d-lg-block">
             <button
               className="btn btn-light px-4 rounded-pill fw-semibold"
-              onClick={handleShow}
+              onClick={() => setContactOpen(true)}
             >
               Talk to us
             </button>
           </div>
+
+          {/* Mobile Burger */}
+          <button
+            className="btn d-lg-none border-0"
+            onClick={() => setMenuOpen(true)}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
         </div>
       </nav>
 
-      {/* Offcanvas */}
-      <Offcanvas show={show} onHide={handleClose} placement="end">
-        <Offcanvas.Header closeButton style={{ backgroundColor: "#fff" }}>
-          <Offcanvas.Title className="fw-bold fs-3" style={{ color: "#000" }}>
-            Let's Talk
+      {/* MOBILE MENU OFFCANVAS */}
+      <Offcanvas
+        show={menuOpen}
+        onHide={() => setMenuOpen(false)}
+        placement="end"
+        className="d-lg-none"
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>
+            <img src={logo} alt="Logo" style={{ height: "50px" }} />
           </Offcanvas.Title>
         </Offcanvas.Header>
 
-        <Offcanvas.Body
-          className="text-center d-flex flex-column justify-content-center"
-          style={{ minHeight: "80vh" }}
-        >
-          <h2 className="fw-bold mb-5">Ready. Steady. Hire.</h2>
+        <Offcanvas.Body className="text-center">
+          <ul className="list-unstyled fs-4 fw-semibold">
+            <li className="mb-3">
+              <Link to="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link to="/hire-talent" onClick={() => setMenuOpen(false)}>
+                Hire Talent
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link to="/services" onClick={() => setMenuOpen(false)}>
+                Services
+              </Link>
+            </li>
+            <li className="mb-4">
+              <Link to="/about" onClick={() => setMenuOpen(false)}>
+                About
+              </Link>
+            </li>
+          </ul>
 
-          <p className="text-muted">
+          <button
+            className="btn btn-primary w-100 rounded-pill py-2"
+            onClick={() => {
+              setMenuOpen(false);
+              setContactOpen(true);
+            }}
+          >
+            Talk to us
+          </button>
+        </Offcanvas.Body>
+      </Offcanvas>
+
+      {/* CONTACT OFFCANVAS */}
+      <Offcanvas
+        show={contactOpen}
+        onHide={() => setContactOpen(false)}
+        placement="end"
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title className="fw-bold">Let's Talk</Offcanvas.Title>
+        </Offcanvas.Header>
+
+        <Offcanvas.Body className="text-center">
+          <h3 className="fw-bold mb-3">Ready. Steady. Hire.</h3>
+          <p className="text-muted mb-4">
             Stop wasting time — let's find you some talent!
           </p>
 
           <img
             src={contactimg}
-            alt="Talent illustration"
-            className="img-fluid rounded-4 shadow-sm mb-4"
+            alt="Contact"
+            className="img-fluid rounded-4 mb-4"
           />
 
-          {/* Email Block */}
-          <div
-            className="mb-4 p-3 rounded-4"
-            style={{
-              background: "#f8f9fa",
-              boxShadow: emailHover
-                ? "0 8px 20px rgba(13,110,253,0.4)"
-                : "0 4px 10px rgba(0,0,0,0.1)",
-              transform: emailHover ? "translateY(-4px)" : "translateY(0)",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            onMouseEnter={() => setEmailHover(true)}
-            onMouseLeave={() => setEmailHover(false)}
-          >
-            <i
-              className="bi bi-envelope-fill fs-4"
-              style={{ color: emailHover ? "#0d6efd" : "#000" }}
-            ></i>
+          <p className="fw-semibold mb-1">Email</p>
+          <a href="mailto:Hr@staffhavensolution.com">
+            Hr@staffhavensolution.com
+          </a>
 
-            <h5 className="mt-2 mb-0">
-              <a
-                href="mailto:Hr@staffhavensolution.com"
-                style={{
-                  textDecoration: "none",
-                  color: emailHover ? "#0d6efd" : "#000",
-                  transition: "color 0.3s ease",
-                }}
-              >
-                Hr@staffhavensolution.com
-              </a>
-            </h5>
-          </div>
-
-          {/* Phone Block */}
-          <div
-            className="mb-4 p-3 rounded-4"
-            style={{
-              background: "#f8f9fa",
-              boxShadow: phoneHover
-                ? "0 8px 20px rgba(13,110,253,0.4)"
-                : "0 4px 10px rgba(0,0,0,0.1)",
-              transform: phoneHover ? "translateY(-4px)" : "translateY(0)",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            onMouseEnter={() => setPhoneHover(true)}
-            onMouseLeave={() => setPhoneHover(false)}
-          >
-            <i
-              className="bi bi-telephone-fill fs-4"
-              style={{ color: phoneHover ? "#0d6efd" : "#000" }}
-            ></i>
-
-            <h5 className="mt-2 mb-0">
-              <a
-                href="tel:14697951858"
-                style={{
-                  textDecoration: "none",
-                  color: phoneHover ? "#0d6efd" : "#000",
-                  transition: "color 0.3s ease",
-                }}
-              >
-                1 (469) 795-1858
-              </a>
-            </h5>
-          </div>
-
-          <p className="mt-4 text-muted">We're here to help — anytime!</p>
+          <p className="fw-semibold mt-4 mb-1">Phone</p>
+          <a href="tel:14697951858">1 (469) 795-1858</a>
         </Offcanvas.Body>
       </Offcanvas>
     </>

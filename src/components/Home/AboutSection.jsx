@@ -29,9 +29,9 @@ function AboutSection() {
                 marginBottom: "1rem",
               }}
             >
-              Our staff have one mission: to help our customers find and hire
-              Simply Great People and to deliver an amazing experience to the
-              candidates that we work with.
+              At StaffHaven, our mission is simple—to help organizations hire
+              exceptional talent while delivering a positive, transparent, and
+              respectful experience to every candidate we work with.
             </p>
 
             <p
@@ -41,9 +41,10 @@ function AboutSection() {
                 marginBottom: "1rem",
               }}
             >
-              Our role is to delight those who we come into contact with. We
-              want Simply Great People in StaffHaven. Traits that we look for
-              include honesty, humility and insatiable curiosity.
+              We are passionate about connecting Simply Great People with Simply
+              Great Opportunities. Whether supporting our clients or guiding
+              candidates through their career journey, we focus on quality,
+              integrity, and long-term success.
             </p>
 
             <p
@@ -53,8 +54,11 @@ function AboutSection() {
                 marginBottom: "1.5rem",
               }}
             >
-              Our culture is built on trust and the desire to do the right
-              thing, always. Sounds like you? Give us a call, we want to talk.
+              Our culture is built on trust, accountability, and doing the right
+              thing—always. We value honesty, humility, and curiosity, and we
+              believe great recruitment starts with great people. If you share
+              our values and want to make a meaningful impact in the world of
+              talent and staffing, we’d love to hear from you.
             </p>
 
             {/* buttons */}
