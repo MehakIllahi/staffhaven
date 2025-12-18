@@ -6,8 +6,8 @@ import logo from "/logo.jpg";
 import contactimg from "../assets/contactimg.png";
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [show, setShow] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Mobile menu state
+  const [show, setShow] = useState(false); // Offcanvas state
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
@@ -42,7 +42,6 @@ export default function Header() {
                   Home
                 </Link>
               </li>
-
               <li className="nav-item">
                 <Link
                   className="nav-link text-white"
@@ -52,7 +51,6 @@ export default function Header() {
                   Hire Talent
                 </Link>
               </li>
-
               <li className="nav-item">
                 <Link
                   className="nav-link text-white"
@@ -62,7 +60,6 @@ export default function Header() {
                   Service
                 </Link>
               </li>
-
               <li className="nav-item">
                 <Link
                   className="nav-link text-white"
