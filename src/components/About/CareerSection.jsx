@@ -53,8 +53,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Tired of the “one-size-fits-all” approach from traditional
-                recruiters?
-                <strong>So are we.</strong>
+                recruiters? <strong>So are we.</strong>
               </p>
 
               <p>
