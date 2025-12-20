@@ -1,0 +1,92 @@
+/* ---------- FOOTER BASE ---------- */
+.footer {
+  background-color: #004952;
+  color: #ffffff;
+}
+
+.topSection {
+  padding: 24px 0;
+}
+
+/* ---------- TEXT ---------- */
+.title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.heading {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  /* border-bottom: 3px solid white; */
+  text-decoration: underline;
+  font-style: italic;
+  /* width: 30%; */
+}
+
+.linkWrapper {
+  margin-bottom: 8px;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+  width: 140px;
+  margin-top: 50px;
+}
+
+/* ---------- LINK STYLE (SAME AS NAVBAR) ---------- */
+.footerLink {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* hover text */
+.footerLink:hover {
+  color: #ffffff;
+}
+
+/* underline animation */
+.footerLink::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: -4px;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.footerLink:hover::after {
+  width: 100%;
+}
+
+/* ---------- MOBILE FIX ---------- */
+@media (max-width: 991px) {
+  .footerLink::after {
+    display: none;
+  }
+}
+
+/* ---------- BOTTOM STRIP ---------- */
+.bottomStrip {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+}
+
+.copyText {
+  font-size: 13px;
+}

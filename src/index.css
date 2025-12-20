@@ -68,3 +68,9 @@ Usage: Primary text or contrast sections (like footers).
 Hex: #E0E5E5
 
 Usage: Borders, cards, or background blocks. */
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* Regular text */
+  font-size: 16px;
+  line-height: 1.5;
+}

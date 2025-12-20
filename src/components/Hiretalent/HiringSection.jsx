@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // A single-file React component using Bootstrap's container / row / col
 // It references the uploaded image at the provided local path.
-
+import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
 const heroImage = "imgg3.jpg";
 
 export default function HiringSection() {
+  const [showTalk, setShowTalk] = useState(false);
   return (
     <section className="py-5 bg-primary-custom">
       <div className="container">
@@ -38,7 +39,11 @@ export default function HiringSection() {
               <button className="btn btn-light rounded-pill px-4 btn-hover">
                 We Can Help - Find Out How →
               </button>
-              <button className="btn btn-outline-light rounded-pill px-4 btn-hover">
+
+              <button
+                className="btn btn-outline-light rounded-pill px-4 btn-hover"
+                onClick={() => setShowTalk(true)}
+              >
                 Get in Touch →
               </button>
             </div>
@@ -128,6 +133,7 @@ export default function HiringSection() {
           .display-5 { font-size: 2rem; }
         }
       `}</style>
+      <TalkToUsOffcanvas show={showTalk} onClose={() => setShowTalk(false)} />
     </section>
   );
 }

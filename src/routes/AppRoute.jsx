@@ -7,6 +7,9 @@ import About from "../pages/About";
 import Services from "../pages/Services";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import CookiePolicy from "../pages/CookiePolicy";
+import TermOfUse from "../pages/TermOfUse";
 
 const AppRoute = () => {
   return (
@@ -16,6 +19,9 @@ const AppRoute = () => {
       <Route path="/services" element={<Services />} />
       <Route path="/hire-talent" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/cookie-policy" element={<CookiePolicy />} />
+      <Route path="/terms" element={<TermOfUse />} />
     </Routes>
   );
 };

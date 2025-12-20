@@ -1,0 +1,69 @@
+.navLink {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: white !important;
+}
+
+/* Hover underline animation */
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: -4px;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Active route */
+.activeLink {
+  color: white !important;
+}
+
+.activeLink::after {
+  width: 100%;
+  transition: width 0.18s ease;
+}
+
+/* CTA button hover */
+.navButton:hover {
+  background-color: #004952 !important;
+  color: white !important;
+}
+
+/* Mobile fix for underline */
+@media (max-width: 991px) {
+  .navLink::after {
+    display: none;
+  }
+}
+
+/* Sticky header */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  animation: slideDown 0.3s ease;
+}
+
+/* Smooth entrance */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

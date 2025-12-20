@@ -1,9 +1,9 @@
-// --------------------------------------------
-// Third Section Component ("But there is a solution...")
-// --------------------------------------------
+import React, { useState, useEffect } from "react";
 import solutionImage from "../../assets/img9.jpg";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
+import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
 export function SolutionSection() {
+  const [showTalk, setShowTalk] = useState(false);
   return (
     <section className="py-5 bg-white">
       <div className="container">
@@ -29,7 +29,10 @@ export function SolutionSection() {
               And yes — our pricing is transparent and fair.
             </p>
 
-            <button className="bg-primary-custom rounded-pill px-4 py-2">
+            <button
+              className="bg-primary-custom rounded-pill px-4 py-2"
+              onClick={() => setShowTalk(true)}
+            >
               Get in touch →
             </button>
           </div>
@@ -44,6 +47,7 @@ export function SolutionSection() {
           </div>
         </div>
       </div>
+      <TalkToUsOffcanvas show={showTalk} onClose={() => setShowTalk(false)} />
     </section>
   );
 }

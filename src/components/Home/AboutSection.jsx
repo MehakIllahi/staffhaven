@@ -4,7 +4,7 @@ import ProgressiveImage from "../Imageloader/ProgressiveImage";
 import officeImg from "../../assets/img3.jpg"; // top small image
 import peopleImg from "../../assets/img7.jpg"; // bottom small image
 import { Link } from "react-router-dom";
-
+import Styles from "./Home.module.css";
 function AboutSection() {
   return (
     <section style={{ padding: "4rem 0 5rem" }}>
@@ -65,7 +65,6 @@ function AboutSection() {
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <Link to={"/about"} className="text-decoration-none">
                 <button
-                  className=""
                   style={{
                     padding: "0.9rem 1.9rem",
                     borderRadius: "999px",
@@ -78,6 +77,7 @@ function AboutSection() {
                     alignItems: "center",
                     gap: "0.5rem",
                   }}
+                  className={`${Styles.homepagebtn}`}
                 >
                   About Us <span>➜</span>
                 </button>
@@ -96,6 +96,7 @@ function AboutSection() {
                     alignItems: "center",
                     gap: "0.5rem",
                   }}
+                  className={`${Styles.homerevpagebtn}`}
                 >
                   Hire Talent <span>➜</span>
                 </button>

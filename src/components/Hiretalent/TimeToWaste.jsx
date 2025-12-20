@@ -1,6 +1,9 @@
 import secondImage from "../../assets/img12.jpg";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
+import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
+import React, { useState, useEffect } from "react";
 export function TimeToWasteSection() {
+  const [showTalk, setShowTalk] = useState(false);
   return (
     <section className="py-5 bg-white">
       <div className="container">
@@ -36,12 +39,16 @@ export function TimeToWasteSection() {
               Do you really have time to spend like that?
             </p>
 
-            <button className="bg-primary-custom rounded-pill px-4 py-2">
+            <button
+              className="bg-primary-custom rounded-pill px-4 py-2"
+              onClick={() => setShowTalk(true)}
+            >
               Get in touch →
             </button>
           </div>
         </div>
       </div>
+      <TalkToUsOffcanvas show={showTalk} onClose={() => setShowTalk(false)} />
     </section>
   );
 }

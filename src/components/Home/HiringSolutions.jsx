@@ -9,6 +9,7 @@ function HiringSolutions() {
         backgroundColor: "#f7f9fc",
         padding: "4rem 0",
       }}
+      id="hero"
     >
       <Container>
         {/* Heading */}

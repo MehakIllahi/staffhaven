@@ -5,6 +5,7 @@ import ProgressiveImage from "../Imageloader/ProgressiveImage";
 import imgMain from "../../assets/img4.jpg"; // big image
 import imgTop from "../../assets/img2.jpg"; // top small image
 import imgBottom from "../../assets/img5.jpg"; // bottom small image
+import Styles from "./Home.module.css";
 
 function WhyStaffHaven() {
   return (
@@ -57,6 +58,7 @@ function WhyStaffHaven() {
                   fontSize: "1rem",
                   color: "black",
                 }}
+                className={`${Styles.homerevpagebtn}`}
               >
                 About Us
               </button>

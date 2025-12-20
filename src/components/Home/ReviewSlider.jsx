@@ -1,43 +1,49 @@
 import React from "react";
 import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
+import people1 from "../../assets/people1.jpg";
+import people2 from "../../assets/people2.jpg";
+import people3 from "../../assets/people3.jpg";
+import people4 from "../../assets/people4.jpg";
+import people5 from "../../assets/people5.jpg";
+import people6 from "../../assets/people6.jpg";
 
 const reviews = [
   {
-    text: "Brook is lovely, super quick at responding and great at sorting out both the client work and the accounting side of things.",
+    text: " Super quick at responding and great at sorting out both the client and candidate.",
     name: "Evelin",
     role: "Candidate",
-    image: "/images/reviews/evelin.jpg",
+    image: people1,
   },
   {
     text: "Really nice to work with getting a new contract. Great communication and follow up.",
     name: "Dainyika",
     role: "Candidate",
-    image: "/images/reviews/dainyika.jpg",
+    image: people2,
   },
   {
     text: "Fantastic support from start to finish. I always felt informed and looked after.",
     name: "Anika",
     role: "Candidate",
-    image: "/images/reviews/anika.jpg",
+    image: people3,
   },
   {
     text: "Professional, friendly and efficient – couldn’t ask for more from a recruiter.",
     name: "Jordan",
     role: "Candidate",
-    image: "/images/reviews/jordan.jpg",
+    image: people4,
   },
   {
     text: "Made the whole process so smooth and stress-free. Highly recommended.",
     name: "Sam",
     role: "Candidate",
-    image: "/images/reviews/sam.jpg",
+    image: people5,
   },
   {
     text: "They really listened to what I wanted and found the perfect role.",
     name: "Priya",
     role: "Candidate",
-    image: "/images/reviews/priya.jpg",
+    image: people6,
   },
 ];
 
@@ -51,88 +57,50 @@ function ReviewSlider() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    appendDots: (dots) => (
-      <div style={{ marginTop: "1.5rem" }}>
-        <ul style={{ margin: 0 }}>{dots}</ul>
-      </div>
-    ),
-    customPaging: () => (
-      <div
-        style={{
-          width: "8px",
-          height: "8px",
-          borderRadius: "50%",
-          background: "#64748b",
-        }}
-      />
-    ),
   };
 
-  // Group reviews into chunks of 3
+  // Group reviews (3 per slide)
   const slides = [];
   for (let i = 0; i < reviews.length; i += 3) {
     slides.push(reviews.slice(i, i + 3));
   }
 
-  const cardStyle = {
-    textAlign: "center",
-    padding: "2rem",
-  };
-
-  const avatarStyle = {
-    width: "70px",
-    height: "70px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    marginBottom: "1rem",
-  };
-
-  const starsStyle = {
-    color: "#f7b500",
-    marginBottom: "1rem",
-    fontSize: "1.1rem",
-    letterSpacing: "2px",
-  };
-
-  const textStyle = {
-    fontSize: "0.98rem",
-    lineHeight: 1.7,
-    color: "#111",
-    marginBottom: "1rem",
-  };
-
-  const nameStyle = {
-    fontWeight: 700,
-    fontSize: "1rem",
-  };
-
   return (
-    <section style={{ padding: "4rem 0" }}>
+    <section className="py-5">
       <Container>
         <Slider {...settings}>
           {slides.map((group, idx) => (
             <div key={idx}>
               <Row className="justify-content-center">
                 {group.map((review, i) => (
-                  <Col md={4} key={i}>
-                    <div style={cardStyle}>
-                      <img
-                        src={review.image}
-                        alt={review.name}
-                        style={avatarStyle}
-                      />
+                  <Col md={4} className="text-center px-4" key={i}>
+                    {/* Avatar */}
+                    <img
+                      src={review.image}
+                      alt={review.name}
+                      className="rounded-circle mx-auto d-block mb-3"
+                      style={{
+                        width: "120px",
+                        height: "120px",
+                        objectFit: "cover",
+                      }}
+                    />
 
-                      <div style={starsStyle}>★★★★★</div>
+                    {/* Stars */}
+                    <div className="mb-3 text-warning fs-5">★★★★★</div>
 
-                      <p style={textStyle}>{review.text}</p>
+                    {/* Review Text */}
+                    <p className="text-dark mb-3" style={{ lineHeight: 1.7 }}>
+                      {review.text}
+                    </p>
 
-                      <p style={nameStyle}>
-                        {review.name},{" "}
-                        <span style={{ fontWeight: 600, color: "#555" }}>
-                          {review.role}
-                        </span>
-                      </p>
-                    </div>
+                    {/* Name */}
+                    <p className="fw-bold mb-0">
+                      {review.name},{" "}
+                      <span className="fw-semibold text-muted">
+                        {review.role}
+                      </span>
+                    </p>
                   </Col>
                 ))}
               </Row>

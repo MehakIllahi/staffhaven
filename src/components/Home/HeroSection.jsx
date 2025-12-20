@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import bannerimg from "/bannerimg2.jpg";
 import { Link } from "react-router-dom";
+import Styles from "./Home.module.css";
 
 function HeroSection() {
   return (
@@ -46,7 +47,7 @@ function HeroSection() {
                     fontWeight: 600,
                     fontSize: "1rem",
                   }}
-                  className="bg-primary-custom"
+                  className={`bg-primary-custom ${Styles.homepagebtn}`}
                 >
                   Explore Services
                 </button>
