@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 // A single-file React component using Bootstrap's container / row / col
 // It references the uploaded image at the provided local path.
 import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
+import { Link } from "react-router-dom";
 const heroImage = "imgg3.jpg";
+import Styles from "./Hiretalent.module.css";
 
 export default function HiringSection() {
   const [showTalk, setShowTalk] = useState(false);
@@ -35,13 +37,16 @@ export default function HiringSection() {
               they can consistently deliver high-quality candidates.
             </p>
 
-            <div className="mt-4 d-flex gap-3 flex-wrap">
-              <button className="btn btn-light rounded-pill px-4 btn-hover">
-                We Can Help - Find Out How →
-              </button>
-
+            <div className="mt-2 d-flex gap-3 flex-wrap">
+              <Link to="/about">
+                <button
+                  className={`btn btn-light rounded-pill ${Styles.homerevpagebtn}`}
+                >
+                  Find Out How →
+                </button>
+              </Link>
               <button
-                className="btn btn-outline-light rounded-pill px-4 btn-hover"
+                className={`btn btn-outline-light rounded-pill ${Styles.homepagebtn}`}
                 onClick={() => setShowTalk(true)}
               >
                 Get in Touch →
@@ -64,7 +69,7 @@ export default function HiringSection() {
 
               {/* Floating profile cards - absolute positioned */}
               <div
-                className="card profile-card"
+                className={`card ${Styles.profileCard}`}
                 style={{ top: "8%", right: "-12%" }}
               >
                 <div className="card-body text-center">
@@ -80,7 +85,7 @@ export default function HiringSection() {
               </div>
 
               <div
-                className="card profile-card"
+                className={`card ${Styles.profileCard}`}
                 style={{ bottom: "18%", left: "-6%" }}
               >
                 <div className="card-body text-center">
@@ -98,41 +103,6 @@ export default function HiringSection() {
           </div>
         </div>
       </div>
-
-      {/* Inline styles for the floating profile cards, hover effects, and responsive tweaks */}
-      <style>{`
-        .profile-card {
-          position: absolute;
-          width: 160px;
-          border-radius: 8px;
-          box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Hover effect for profile cards */
-        .profile-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 24px rgba(0,0,0,0.25);
-        }
-
-        /* Hover effect for buttons */
-        .btn-hover:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        /* Position adjustments for smaller screens */
-        @media (max-width: 767px) {
-          section { padding-top: 3rem; padding-bottom: 3rem; }
-          .profile-card { display: none; }
-        }
-
-        /* keep buttons and text responsive on medium screens */
-        @media (max-width: 991px) {
-          .display-5 { font-size: 2rem; }
-        }
-      `}</style>
       <TalkToUsOffcanvas show={showTalk} onClose={() => setShowTalk(false)} />
     </section>
   );

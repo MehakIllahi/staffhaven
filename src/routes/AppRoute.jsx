@@ -10,6 +10,7 @@ import Contact from "../pages/Contact";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import CookiePolicy from "../pages/CookiePolicy";
 import TermOfUse from "../pages/TermOfUse";
+import NotFound from "../components/common/NotFound";
 
 const AppRoute = () => {
   return (
@@ -22,6 +23,7 @@ const AppRoute = () => {
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/cookie-policy" element={<CookiePolicy />} />
       <Route path="/terms" element={<TermOfUse />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import contactimg from "../../assets/contactimg.png";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import { CiPhone } from "react-icons/ci";
 
 const TalkToUsOffcanvas = ({ show, onClose }) => {
   const [emailHover, setEmailHover] = useState(false);
@@ -17,10 +18,12 @@ const TalkToUsOffcanvas = ({ show, onClose }) => {
       style={{ zIndex: 2000 }}
     >
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title className="fw-bold fs-3">Let's Talk</Offcanvas.Title>
+        <Offcanvas.Title className="fw-bold fs-3 mb-2">
+          Let's Talk
+        </Offcanvas.Title>
       </Offcanvas.Header>
 
-      <Offcanvas.Body className="text-center d-flex flex-column justify-content-center">
+      <Offcanvas.Body className="text-center d-flex flex-column  mb-2">
         <h2 className="fw-bold">Ready. Steady. Hire.</h2>
         <p className="text-muted">
           Stop wasting time — let's find you some talent!
@@ -61,7 +64,7 @@ const TalkToUsOffcanvas = ({ show, onClose }) => {
             onMouseEnter={() => setPhoneHover(true)}
             onMouseLeave={() => setPhoneHover(false)}
           >
-            <AiOutlinePhone size={20} />
+            <CiPhone size={20} />
             <a
               href="tel:14697951858"
               className="text-decoration-none"
