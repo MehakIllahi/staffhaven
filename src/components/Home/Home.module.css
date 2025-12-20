@@ -9,3 +9,38 @@
   color: white !important;
   border: 2px solid white !important;
 }
+
+/* Initial state: hidden and off-screen left */
+.reasonItem {
+  opacity: 0;
+  transform: translateX(-50px) scale(0.95) rotate(-5deg);
+  transition: all 0.7s ease-out;
+}
+
+/* Animated state */
+.animate {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotate(0deg);
+}
+
+/* Optional: add a subtle bounce with keyframes */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.8) rotate(-5deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(10px) scale(1.05) rotate(3deg);
+  }
+  80% {
+    transform: translateX(-5px) scale(0.98) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+}
+
+.animate {
+  animation: bounceIn 0.8s ease forwards;
+}

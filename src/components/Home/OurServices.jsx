@@ -15,7 +15,7 @@ import {
 function OurServices() {
   const servicesTop = [
     {
-      icon: <TbLayoutGrid />,
+      icon: <TbLayoutGrid size={60} />,
       title: "We Provide a Personalized Recruitment Approach",
       text: [
         "At StaffHaven, we understand that every hiring requirement is unique and deserves a tailored strategy.",
@@ -24,7 +24,7 @@ function OurServices() {
       ],
     },
     {
-      icon: <TbLayersSubtract />,
+      icon: <TbLayersSubtract size={60} />,
       title: "We Provide Human-Centered Staffing Services",
       text: [
         "Recruitment is ultimately about people, not just filling positions. We focus on meaningful relationships.",
@@ -33,7 +33,7 @@ function OurServices() {
       ],
     },
     {
-      icon: <TbShieldCheck />,
+      icon: <TbShieldCheck size={60} />,
       title: "We Provide Equal Opportunity Hiring",
       text: [
         "We believe that strong organizations are built through diverse and inclusive hiring practices.",
@@ -45,7 +45,7 @@ function OurServices() {
 
   const servicesBottom = [
     {
-      icon: <TbUsers />,
+      icon: <TbUsers size={60} />,
       title: "We Provide Contract & Temporary Staffing",
       text: [
         "Changing business demands require flexible workforce solutions. Our contract staffing meets short-term needs.",
@@ -54,7 +54,7 @@ function OurServices() {
       ],
     },
     {
-      icon: <TbUserCheck />,
+      icon: <TbUserCheck size={60} />,
 
       title: "We Provide Permanent Hiring Solutions",
       text: [
@@ -64,7 +64,7 @@ function OurServices() {
       ],
     },
     {
-      icon: <TbBriefcase />,
+      icon: <TbBriefcase size={60} />,
 
       title: "We Provide Recruitment Consulting & Advisory",
       text: [
@@ -80,7 +80,7 @@ function OurServices() {
   };
 
   const iconStyle = {
-    fontSize: "2.2rem",
+    fontSize: "3rem", // bigger icon
     marginBottom: "1.5rem",
     color: "#004952", // your primary blue
   };
