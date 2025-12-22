@@ -77,7 +77,12 @@ function AboutSection() {
           </Col>
 
           {/* RIGHT: images */}
-          <Col md={6} className="mt-5 mt-md-0" style={{ position: "relative" }}>
+          <Col
+            md={6}
+            className="mt-5 mt-md-0 d-none d-md-block
+"
+            style={{ position: "relative" }}
+          >
             {/* big image */}
             <div
               style={{
@@ -95,7 +100,7 @@ function AboutSection() {
 
             {/* overlapping image (desktop only) */}
             <div
-              className="d-none d-md-block"
+              className="d-none d-md-block "
               style={{
                 position: "absolute",
                 right: "-30px",

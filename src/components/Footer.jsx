@@ -13,7 +13,10 @@ const Footer = () => {
         <Container>
           <Row className="align-items-start" style={{ minHeight: "260px" }}>
             {/* Column 1 */}
-            <Col md={3} className="d-flex flex-column justify-content-between">
+            <Col
+              md={3}
+              className="d-flex flex-column justify-content-between text-center text-md-start mb-4 mb-md-0"
+            >
               <div>
                 <h1 className={styles.title}>STAFFHAVEN</h1>
                 <p className={`${styles.subtitle}`}>
@@ -36,7 +39,7 @@ const Footer = () => {
             <Col md={3}></Col>
 
             {/* Company Links */}
-            <Col md={3}>
+            <Col md={3} className="text-center text-md-start mb-4 mb-md-0">
               <h6 className={styles.heading}>Company</h6>
 
               <p className={styles.linkWrapper}>
@@ -59,7 +62,7 @@ const Footer = () => {
             </Col>
 
             {/* Legal Links */}
-            <Col md={3}>
+            <Col md={3} className="text-center text-md-start">
               <h6 className={styles.heading}>Legal & Compliance</h6>
 
               <p className={styles.linkWrapper}>

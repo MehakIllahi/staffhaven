@@ -77,28 +77,31 @@ function WhyStaffHaven() {
                 </Col>
 
                 {/* STACKED IMAGES */}
-                <Col xs={12} md={5} className="d-flex flex-column gap-3">
-                  <img
-                    src={imgTop}
-                    alt="Team 1"
-                    className="w-100"
-                    style={{
-                      minHeight: "125px",
-                      borderRadius: "20px",
-                      objectFit: "cover",
-                    }}
-                  />
-                  <img
-                    src={imgBottom}
-                    alt="Team 2"
-                    className="w-100"
-                    style={{
-                      minHeight: "125px",
-                      borderRadius: "20px",
-                      objectFit: "cover",
-                    }}
-                  />
-                </Col>
+                {/* STACKED IMAGES - hidden on mobile, visible on tablet & desktop */}
+                <div className="d-none d-md-block">
+                  <Col md={5} className="d-flex flex-column gap-3">
+                    <img
+                      src={imgTop}
+                      alt="Team 1"
+                      className="w-100"
+                      style={{
+                        minHeight: "125px",
+                        borderRadius: "20px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <img
+                      src={imgBottom}
+                      alt="Team 2"
+                      className="w-100"
+                      style={{
+                        minHeight: "125px",
+                        borderRadius: "20px",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Col>
+                </div>
               </Row>
             </Col>
           </Row>

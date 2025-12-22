@@ -5,7 +5,7 @@ import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
 export function SolutionSection() {
   const [showTalk, setShowTalk] = useState(false);
   return (
-    <section className="py-5 bg-white">
+    <section className="py-5 bg-light bg-md-white">
       <div className="container">
         <div className="row align-items-center">
           {/* Left: Text */}
