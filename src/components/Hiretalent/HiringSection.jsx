@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
-
-// A single-file React component using Bootstrap's container / row / col
-// It references the uploaded image at the provided local path.
+import React, { useState } from "react";
 import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
 import { Link } from "react-router-dom";
-const heroImage = "imgg3.jpg";
 import Styles from "./Hiretalent.module.css";
+
+const heroImage = "imgg3.jpg";
 
 export default function HiringSection() {
   const [showTalk, setShowTalk] = useState(false);
+
   return (
     <section className="py-5 bg-primary-custom">
       <div className="container">
         <div className="row align-items-center">
-          {/* Left column: headline + copy + buttons */}
-          <div className="col-md-6 text-white">
+          {/* LEFT COLUMN */}
+          <div className="col-md-6 text-white text-center text-md-start mb-4 mb-md-0">
             <small className="btn btn-outline-light btn-sm mb-3">
               Hire Talent
             </small>
+
             <h1 className="display-5 fw-bold" style={{ lineHeight: 1.05 }}>
               Facing Hiring
               <br />
@@ -37,7 +37,7 @@ export default function HiringSection() {
               they can consistently deliver high-quality candidates.
             </p>
 
-            <div className="mt-2 d-flex gap-3 flex-wrap">
+            <div className="mt-3 d-flex gap-3 justify-content-center justify-content-md-start flex-wrap">
               <Link to="/about">
                 <button
                   className={`btn btn-light rounded-pill ${Styles.homerevpagebtn}`}
@@ -45,6 +45,7 @@ export default function HiringSection() {
                   Find Out How →
                 </button>
               </Link>
+
               <button
                 className={`btn btn-outline-light rounded-pill ${Styles.homepagebtn}`}
                 onClick={() => setShowTalk(true)}
@@ -54,7 +55,7 @@ export default function HiringSection() {
             </div>
           </div>
 
-          {/* Right column: image with overlay cards */}
+          {/* RIGHT COLUMN */}
           <div className="col-md-6">
             <div
               className="position-relative mx-auto"
@@ -67,10 +68,10 @@ export default function HiringSection() {
                 style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.25)" }}
               />
 
-              {/* Floating profile cards - absolute positioned */}
+              {/* FLOATING CARD 1 – hidden on mobile */}
               <div
-                className={`card ${Styles.profileCard}`}
-                style={{ top: "8%", right: "-12%" }}
+                className={`card ${Styles.profileCard} d-none d-md-block`}
+                style={{ top: "8%", right: "-12%", position: "absolute" }}
               >
                 <div className="card-body text-center">
                   <img
@@ -84,9 +85,10 @@ export default function HiringSection() {
                 </div>
               </div>
 
+              {/* FLOATING CARD 2 – hidden on mobile */}
               <div
-                className={`card ${Styles.profileCard}`}
-                style={{ bottom: "18%", left: "-6%" }}
+                className={`card ${Styles.profileCard} d-none d-md-block`}
+                style={{ bottom: "18%", left: "-6%", position: "absolute" }}
               >
                 <div className="card-body text-center">
                   <img
@@ -103,6 +105,7 @@ export default function HiringSection() {
           </div>
         </div>
       </div>
+
       <TalkToUsOffcanvas show={showTalk} onClose={() => setShowTalk(false)} />
     </section>
   );
