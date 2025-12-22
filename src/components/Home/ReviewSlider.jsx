@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import people1 from "../../assets/people1.jpg";
 import people2 from "../../assets/people2.jpg";
@@ -49,55 +49,119 @@ const reviews = [
 ];
 
 function ReviewSlider() {
-  const settings = {
+  /* ---------- SETTINGS ---------- */
+
+  // Desktop / Tablet → 3 reviews per slide
+  const desktopSettings = {
     dots: true,
     arrows: false,
     infinite: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 5000,
-
-    // ✅ ONE REVIEW PER SCREEN (ALWAYS)
     slidesToShow: 1,
     slidesToScroll: 1,
   };
 
+  // Mobile → 1 review per slide
+  const mobileSettings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  // Group reviews (3 per slide) for desktop
+  const groupedReviews = [];
+  for (let i = 0; i < reviews.length; i += 3) {
+    groupedReviews.push(reviews.slice(i, i + 3));
+  }
+
   return (
     <section className="py-5">
       <Container>
-        <Slider {...settings}>
-          {reviews.map((review, index) => (
-            <div key={index}>
-              {/* ONE CARD ONLY */}
-              <div
-                className="text-center mx-auto px-3"
-                style={{ maxWidth: "420px" }}
-              >
-                <img
-                  src={review.image}
-                  alt={review.name}
-                  className="rounded-circle mb-3"
-                  style={{
-                    width: "120px",
-                    height: "120px",
-                    objectFit: "cover",
-                  }}
-                />
+        {/* ================= DESKTOP / TABLET SLIDER ================= */}
+        <div className="d-none d-md-block">
+          <Slider {...desktopSettings}>
+            {groupedReviews.map((group, slideIndex) => (
+              <div key={slideIndex}>
+                <Row className="justify-content-center">
+                  {group.map((review, index) => (
+                    <Col md={4} className="text-center px-4" key={index}>
+                      <img
+                        src={review.image}
+                        alt={review.name}
+                        className="rounded-circle mx-auto d-block mb-3"
+                        style={{
+                          width: "120px",
+                          height: "120px",
+                          objectFit: "cover",
+                        }}
+                      />
 
-                <div className="mb-3 text-warning fs-5">★★★★★</div>
+                      <div className="mb-3 text-warning fs-5">★★★★★</div>
 
-                <p className="text-dark mb-3" style={{ lineHeight: 1.7 }}>
-                  {review.text}
-                </p>
+                      <p className="text-dark mb-3" style={{ lineHeight: 1.7 }}>
+                        {review.text}
+                      </p>
 
-                <p className="fw-bold mb-0">
-                  {review.name},{" "}
-                  <span className="text-muted fw-semibold">{review.role}</span>
-                </p>
+                      <p className="fw-bold mb-0">
+                        {review.name},{" "}
+                        <span className="fw-semibold text-muted">
+                          {review.role}
+                        </span>
+                      </p>
+                    </Col>
+                  ))}
+                </Row>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
+
+        {/* ================= MOBILE SLIDER ================= */}
+        {/* ================= MOBILE SLIDER ================= */}
+        <div className="d-md-none">
+          <Slider {...mobileSettings}>
+            {reviews.map((review, index) => (
+              <div key={index}>
+                <div className="d-flex flex-column align-items-center text-center px-3">
+                  {/* Image centered */}
+                  <img
+                    src={review.image}
+                    alt={review.name}
+                    className="rounded-circle mb-3"
+                    style={{
+                      width: "120px",
+                      height: "120px",
+                      objectFit: "cover",
+                    }}
+                  />
+
+                  {/* Stars */}
+                  <div className="mb-3 text-warning fs-5">★★★★★</div>
+
+                  {/* Text */}
+                  <p className="text-dark mb-3" style={{ lineHeight: 1.7 }}>
+                    {review.text}
+                  </p>
+
+                  {/* Name */}
+                  <p className="fw-bold mb-0">
+                    {review.name},{" "}
+                    <span className="text-muted fw-semibold">
+                      {review.role}
+                    </span>
+                  </p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </Container>
     </section>
   );
