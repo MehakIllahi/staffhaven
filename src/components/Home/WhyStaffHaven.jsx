@@ -1,44 +1,44 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProgressiveImage from "../Imageloader/ProgressiveImage";
 
-import imgMain from "../../assets/img4.jpg"; // big image
-import imgTop from "../../assets/img2.jpg"; // top small image
-import imgBottom from "../../assets/img5.jpg"; // bottom small image
-import Styles from "./Home.module.css";
+import imgMain from "../../assets/img4.jpg";
+import imgTop from "../../assets/img2.jpg";
+import imgBottom from "../../assets/img5.jpg";
 
 function WhyStaffHaven() {
   return (
     <>
-      <section className="bg-primary-custom" style={{ padding: "60px 20px" }}>
+      <section className="bg-primary-custom py-5 px-3">
         <Container>
-          <Row className=" mb-2">
-            {/* LEFT: content */}
-            <Col md={6}>
+          <Row className="align-items-center">
+            {/* LEFT CONTENT */}
+            <Col md={6} className="text-center text-md-start mb-4 mb-md-0">
               <h2
+                className="mb-4"
                 style={{
                   fontSize: "2.2rem",
                   fontWeight: 700,
                   color: "white",
                 }}
-                className="mb-4"
               >
                 Why STAFFHAVEN
               </h2>
+
               <p
+                className="mx-auto mx-md-0"
                 style={{
                   color: "white",
                   fontSize: "1rem",
                   lineHeight: 1.7,
                   maxWidth: "420px",
                 }}
-                className="mb-2"
               >
                 StaffHaven was founded to meet the evolving talent needs of
                 businesses across industries. As a dedicated recruitment
                 partner, we combine market insight, industry experience, and a
                 commitment to exceptional service to help organizations build
-                high-performing teams. <br />
+                high-performing teams.
+                <br />
                 <br />
                 Our expertise covers staffing solutions, talent acquisition
                 strategies, and ensuring candidates find the right
@@ -48,64 +48,54 @@ function WhyStaffHaven() {
               </p>
 
               <button
+                className="btn mt-4 px-5 py-2 fw-semibold"
                 style={{
-                  marginTop: "2rem",
                   backgroundColor: "white",
-                  border: "none",
-                  padding: "0.75rem 2.5rem",
                   borderRadius: "999px",
-                  fontWeight: 600,
-                  fontSize: "1rem",
-                  color: "black",
                 }}
-                className={`${Styles.homerevpagebtn}`}
               >
                 About Us
               </button>
             </Col>
 
-            {/* RIGHT: images (1 big + 2 stacked) */}
-            <Col md={6} className="mb-4 ">
-              <Row className="g-3">
-                {/* Big image */}
-                <Col md={7}>
+            {/* RIGHT IMAGES */}
+            <Col md={6}>
+              <Row className="g-3 ">
+                {/* BIG IMAGE */}
+                <Col xs={12} md={7}>
                   <img
                     src={imgMain}
                     alt="Team working"
+                    className="w-100 d-block "
                     style={{
-                      width: "100%",
                       height: "100%",
+                      minHeight: "260px",
                       borderRadius: "20px",
                       objectFit: "cover",
-                      display: "block",
                     }}
                   />
                 </Col>
 
-                {/* Two stacked images */}
-                <Col
-                  md={5}
-                  className="d-flex flex-column"
-                  style={{ gap: "0.75rem" }}
-                >
+                {/* STACKED IMAGES */}
+                <Col xs={12} md={5} className="d-flex flex-column gap-3">
                   <img
                     src={imgTop}
                     alt="Team 1"
+                    className="w-100"
                     style={{
-                      width: "100%",
+                      minHeight: "125px",
                       borderRadius: "20px",
                       objectFit: "cover",
-                      flex: 1,
                     }}
                   />
                   <img
                     src={imgBottom}
                     alt="Team 2"
+                    className="w-100"
                     style={{
-                      width: "100%",
+                      minHeight: "125px",
                       borderRadius: "20px",
                       objectFit: "cover",
-                      flex: 1,
                     }}
                   />
                 </Col>
@@ -114,6 +104,7 @@ function WhyStaffHaven() {
           </Row>
         </Container>
       </section>
+
       <div
         className="bg-primary-light-custom"
         style={{ height: "20px", width: "100%" }}

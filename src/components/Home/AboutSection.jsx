@@ -1,17 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
-import officeImg from "../../assets/img3.jpg"; // top small image
-import peopleImg from "../../assets/img7.jpg"; // bottom small image
+import officeImg from "../../assets/img3.jpg";
+import peopleImg from "../../assets/img7.jpg";
 import { Link } from "react-router-dom";
-import Styles from "./Home.module.css";
+
 function AboutSection() {
   return (
     <section style={{ padding: "4rem 0 5rem" }}>
       <Container>
         <Row className="align-items-center">
           {/* LEFT: text */}
-          <Col md={6}>
+          <Col md={6} className="text-center text-md-start">
             <h2
               style={{
                 fontSize: "2.6rem",
@@ -22,49 +22,29 @@ function AboutSection() {
               Join STAFFHAVEN?
             </h2>
 
-            <p
-              style={{
-                fontSize: "1rem",
-                lineHeight: 1.8,
-                marginBottom: "1rem",
-              }}
-            >
+            <p style={{ fontSize: "1rem", lineHeight: 1.8 }}>
               At StaffHaven, our mission is simple—to help organizations hire
               exceptional talent while delivering a positive, transparent, and
               respectful experience to every candidate we work with.
             </p>
 
-            <p
-              style={{
-                fontSize: "1rem",
-                lineHeight: 1.8,
-                marginBottom: "1rem",
-              }}
-            >
+            <p style={{ fontSize: "1rem", lineHeight: 1.8 }}>
               We are passionate about connecting Simply Great People with Simply
               Great Opportunities. Whether supporting our clients or guiding
               candidates through their career journey, we focus on quality,
               integrity, and long-term success.
             </p>
 
-            <p
-              style={{
-                fontSize: "1rem",
-                lineHeight: 1.8,
-                marginBottom: "1.5rem",
-              }}
-            >
+            <p style={{ fontSize: "1rem", lineHeight: 1.8 }}>
               Our culture is built on trust, accountability, and doing the right
-              thing—always. We value honesty, humility, and curiosity, and we
-              believe great recruitment starts with great people. If you share
-              our values and want to make a meaningful impact in the world of
-              talent and staffing, we’d love to hear from you.
+              thing—always. We value honesty, humility, and curiosity.
             </p>
 
             {/* buttons */}
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link to={"/about"} className="text-decoration-none">
+            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start mt-4">
+              <Link to="/about" className="text-decoration-none">
                 <button
+                  className="w-100 w-sm-auto"
                   style={{
                     padding: "0.9rem 1.9rem",
                     borderRadius: "999px",
@@ -72,18 +52,15 @@ function AboutSection() {
                     backgroundColor: "#004952",
                     color: "#fff",
                     fontWeight: 600,
-                    fontSize: "0.95rem",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
                   }}
-                  className={`${Styles.homepagebtn}`}
                 >
-                  About Us <span>➜</span>
+                  About Us ➜
                 </button>
               </Link>
-              <Link to={"/hire-talent"} className="text-decoration-none">
+
+              <Link to="/hire-talent" className="text-decoration-none">
                 <button
+                  className="w-100 w-sm-auto"
                   style={{
                     padding: "0.9rem 1.9rem",
                     borderRadius: "999px",
@@ -91,26 +68,17 @@ function AboutSection() {
                     backgroundColor: "#fff",
                     color: "#004952",
                     fontWeight: 600,
-                    fontSize: "0.95rem",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
                   }}
-                  className={`${Styles.homerevpagebtn}`}
                 >
-                  Hire Talent <span>➜</span>
+                  Hire Talent ➜
                 </button>
               </Link>
             </div>
           </Col>
 
           {/* RIGHT: images */}
-          <Col
-            md={6}
-            className="mt-4 mt-md-0"
-            style={{ position: "relative", minHeight: "320px" }}
-          >
-            {/* big rectangle image */}
+          <Col md={6} className="mt-5 mt-md-0" style={{ position: "relative" }}>
+            {/* big image */}
             <div
               style={{
                 width: "100%",
@@ -125,17 +93,36 @@ function AboutSection() {
               />
             </div>
 
-            {/* overlapping round/oval image */}
+            {/* overlapping image (desktop only) */}
             <div
+              className="d-none d-md-block"
               style={{
                 position: "absolute",
                 right: "-30px",
                 bottom: "-40px",
                 width: "55%",
-                borderRadius: "50% 50% 50% 50%",
+                borderRadius: "50%",
                 overflow: "hidden",
                 boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
                 backgroundColor: "#fff",
+              }}
+            >
+              <ProgressiveImage
+                src={peopleImg}
+                alt="Team"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
+
+            {/* mobile image (non-overlapping) */}
+            <div
+              className="d-md-none mt-4 d-none d-md-block"
+              style={{
+                width: "70%",
+                margin: "0 auto",
+                borderRadius: "50%",
+                overflow: "hidden",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
               }}
             >
               <ProgressiveImage
