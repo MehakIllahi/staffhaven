@@ -1,0 +1,11 @@
+.homepagebtn:hover {
+  background-color: white !important;
+  color: #004952 !important;
+  border-radius: 999px !important;
+  border: 2px solid #004952 !important;
+}
+.homerevpagebtn:hover {
+  background-color: #004952 !important;
+  color: white !important;
+  border: 2px solid white !important;
+}

@@ -4,9 +4,6 @@ import {
   TbLayoutGrid,
   TbLayersSubtract,
   TbShieldCheck,
-  TbCircuitChangeover,
-  TbMessageCircle,
-  TbChecklist,
   TbUsers,
   TbUserCheck,
   TbBriefcase,
@@ -55,7 +52,6 @@ function OurServices() {
     },
     {
       icon: <TbUserCheck size={60} />,
-
       title: "We Provide Permanent Hiring Solutions",
       text: [
         "Long-term success depends on hiring the right permanent talent. We manage the full recruitment lifecycle.",
@@ -65,7 +61,6 @@ function OurServices() {
     },
     {
       icon: <TbBriefcase size={60} />,
-
       title: "We Provide Recruitment Consulting & Advisory",
       text: [
         "Beyond staffing, we offer expert recruitment consulting to strengthen hiring strategies.",
@@ -80,9 +75,9 @@ function OurServices() {
   };
 
   const iconStyle = {
-    fontSize: "3rem", // bigger icon
+    fontSize: "3rem",
     marginBottom: "1.5rem",
-    color: "#004952", // your primary blue
+    color: "#004952",
   };
 
   const titleStyle = {
@@ -101,13 +96,14 @@ function OurServices() {
   };
 
   return (
-    <section style={{ padding: "4rem 0" }} className="bg-light">
+    <section className="bg-light" style={{ padding: "4rem 0" }}>
       <Container>
-        {/* First row */}
-        <h1>Our Services</h1>
+        <h1 className="mb-5">Our Services</h1>
+
+        {/* TOP ROW */}
         <Row>
           {servicesTop.map((item, index) => (
-            <Col md={4} key={index}>
+            <Col lg={4} key={index} className="mb-4">
               <div style={cardStyle}>
                 <div style={iconStyle}>{item.icon}</div>
                 <h3 style={titleStyle}>{item.title}</h3>
@@ -121,10 +117,10 @@ function OurServices() {
           ))}
         </Row>
 
-        {/* Second row */}
+        {/* BOTTOM ROW */}
         <Row>
           {servicesBottom.map((item, index) => (
-            <Col md={4} key={index}>
+            <Col lg={4} key={index} className="mb-4">
               <div style={cardStyle}>
                 <div style={iconStyle}>{item.icon}</div>
                 <h3 style={titleStyle}>{item.title}</h3>

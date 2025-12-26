@@ -11,6 +11,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import CookiePolicy from "../pages/CookiePolicy";
 import TermOfUse from "../pages/TermOfUse";
 import NotFound from "../components/common/NotFound";
+import ServiceDetails from "../components/Service/ServiceDetails";
 
 const AppRoute = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoute = () => {
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/cookie-policy" element={<CookiePolicy />} />
       <Route path="/terms" element={<TermOfUse />} />
+      <Route path="/services/:slug" element={<ServiceDetails />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

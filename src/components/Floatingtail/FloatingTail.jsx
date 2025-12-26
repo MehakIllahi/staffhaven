@@ -1,27 +1,32 @@
-import React, { useState } from "react";
-import "./FloatingTail.css";
+import React from "react";
 
-export default function FloatingTail({ children, tooltip }) {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-
-  const handleMove = (e) => {
-    setPos({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY });
-  };
-
+const FloatingTail = () => {
   return (
     <div
-      className="floating-tail-box"
-      onMouseMove={handleMove}
-      style={{ cursor: "pointer" }}
+      className="position-absolute w-100"
+      style={{
+        bottom: "-1px",
+        left: 0,
+        lineHeight: 0,
+        overflow: "hidden",
+      }}
     >
-      {children}
-
-      <div
-        className="floating-tail-tooltip"
-        style={{ left: pos.x, top: pos.y - 20 }}
+      <svg
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        style={{
+          width: "100%",
+          height: "80px",
+          display: "block",
+        }}
       >
-        {tooltip}
-      </div>
+        <path
+          d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,53.3C672,53,768,75,864,80C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32L1440,120L0,120Z"
+          fill="#ffffff"
+        />
+      </svg>
     </div>
   );
-}
+};
+
+export default FloatingTail;

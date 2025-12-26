@@ -1,79 +1,80 @@
 import React from "react";
 import { Row, Col, Card, Button, Container } from "react-bootstrap";
-import img21 from "../../assets/img21.jpg"; // top small image
+import { Link } from "react-router-dom";
+
+import img21 from "../../assets/img21.jpg";
 import img20 from "../../assets/img20.jpg";
-import img19 from "../../assets/img19.jpg"; // top small image
+import img19 from "../../assets/img19.jpg";
 import img22 from "../../assets/img22.jpg";
 import img23 from "../../assets/img23.jpg";
 import img24 from "../../assets/img24.jpg";
+import styles from "./service.module.css";
 
 const Serviceblog = () => {
   const posts = [
     {
       image: img21,
-      title: "Terraform in the UK – Still Critical, But Not a Silver Bullet",
-      date: "November 14, 2025",
-      tag: "DevOps",
+      title: "Engineering & Consulting Solutions",
+      desc: "Trusted US-based engineering consulting tailored to your business needs.",
+      slug: "engineering-consulting",
     },
     {
       image: img20,
-      title: "Hugging Face – Noa Recruitment Newsletter – November 2025",
-      date: "November 03, 2025",
-      tag: "Recruitment",
+      title: "Project Consulting Expertise",
+      desc: "Delivering strategic guidance and execution support across diverse projects.",
+      slug: "project-consulting",
     },
     {
       image: img22,
-      title: "Where JavaScript Stands in the UK Right Now",
-      date: "October 15, 2025",
-      tag: "JavaScript",
+      title: "Engineering Staffing Services",
+      desc: "Connecting top engineering talent with leading organizations worldwide.",
+      slug: "engineering-staffing",
     },
     {
       image: img19,
-      title: "Where JavaScript Stands in the UK Right Now",
-      date: "October 15, 2025",
-      tag: "JavaScript",
+      title: "Contract Staffing Solutions",
+      desc: "Flexible staffing for short-term, seasonal, and specialized project needs.",
+      slug: "contract-staffing",
     },
     {
       image: img23,
-      title: "Where JavaScript Stands in the UK Right Now",
-      date: "October 15, 2025",
-      tag: "JavaScript",
+      title: "Permanent Staffing Services",
+      desc: "End-to-end recruitment solutions for long-term and critical roles.",
+      slug: "permanent-staffing",
     },
     {
       image: img24,
-      title: "Where JavaScript Stands in the UK Right Now",
-      date: "October 15, 2025",
-      tag: "JavaScript",
+      title: "Technology Consulting Services",
+      desc: "Empowering businesses with modern technology and expert consulting.",
+      slug: "technology-consulting",
     },
   ];
 
   return (
     <Container>
-      <Row className="g-4 m-4">
+      <Row className="g-4 my-4">
         {posts.map((post, index) => (
-          <Col md={4} key={index}>
-            <Card className="shadow-sm border-0 rounded-4 overflow-hidden">
+          <Col lg={4} md={6} sm={12} key={index}>
+            <Card className="h-100 shadow-sm border-0 rounded-4 overflow-hidden">
               <Card.Img
                 variant="top"
                 src={post.image}
                 style={{ height: "200px", objectFit: "cover" }}
               />
 
-              <Card.Body className="p-4">
-                <Card.Title
-                  className="fw-semibold"
-                  style={{ fontSize: "1.25rem" }}
-                >
+              <Card.Body className="p-4 d-flex flex-column">
+                <Card.Title className="fw-semibold fs-5">
                   {post.title}
                 </Card.Title>
 
-                <p className="text-muted mt-3 mb-4">{post.date}</p>
+                <p className="text-muted mt-3">{post.desc}</p>
 
                 <Button
-                  variant="light"
-                  className="rounded-pill px-4 py-2 fw-semibold border"
+                  as={Link}
+                  to={`/services/${post.slug}`}
+                  className={`rounded-pill px-4 mt-auto align-self-start bg-primary-custom ${styles.homepagebtn}`}
                 >
-                  {post.tag}
+                  Explore
                 </Button>
               </Card.Body>
             </Card>

@@ -1,15 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import solutionImage from "../../assets/img9.jpg";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
 import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
+
 export function SolutionSection() {
   const [showTalk, setShowTalk] = useState(false);
+
   return (
-    <section className="py-5 bg-light bg-md-white">
+    <section className="py-5 bg-light">
       <div className="container">
         <div className="row align-items-center">
-          {/* Left: Text */}
-          <div className="col-md-6 mb-4 mb-md-0">
+          {/* IMAGE – comes FIRST on mobile */}
+          <div className="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+            <ProgressiveImage
+              src={solutionImage}
+              alt="solution visual"
+              className="img-fluid rounded shadow-sm"
+            />
+          </div>
+
+          {/* TEXT – comes BELOW image on mobile */}
+          <div className="col-md-6 order-2 order-md-1">
             <h2 className="fw-bold display-6 mb-4">
               But there’s a better way…
             </h2>
@@ -36,17 +47,9 @@ export function SolutionSection() {
               Get in touch →
             </button>
           </div>
-
-          {/* Right: Image */}
-          <div className="col-md-6">
-            <ProgressiveImage
-              src={solutionImage}
-              alt="solution visual"
-              className="img-fluid rounded shadow-sm"
-            />
-          </div>
         </div>
       </div>
+
       <TalkToUsOffcanvas show={showTalk} onClose={() => setShowTalk(false)} />
     </section>
   );
