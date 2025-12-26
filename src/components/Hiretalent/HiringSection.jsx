@@ -13,7 +13,7 @@ export default function HiringSection() {
       <div className="container">
         <div className="row align-items-center">
           {/* LEFT COLUMN */}
-          <div className="col-md-6 text-white text-center text-md-start mb-4 mb-md-0">
+          <div className="col-md-6 text-white text-md-start mb-4 mb-md-0">
             <small className="btn btn-outline-light btn-sm mb-3">
               Hire Talent
             </small>
