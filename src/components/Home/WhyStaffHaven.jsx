@@ -12,7 +12,7 @@ function WhyStaffHaven() {
         <Container>
           <Row className="align-items-center">
             {/* LEFT CONTENT */}
-            <Col lg={6} className="text-center text-lg-start mb-4 mb-lg-0">
+            <Col md={6} className="text-center text-md-start mb-4 mb-md-0">
               <h2
                 className="mb-4"
                 style={{
@@ -25,7 +25,7 @@ function WhyStaffHaven() {
               </h2>
 
               <p
-                className="mx-auto mx-lg-0"
+                className="mx-auto mx-md-0"
                 style={{
                   color: "white",
                   fontSize: "1rem",
@@ -57,17 +57,18 @@ function WhyStaffHaven() {
                 About Us
               </button>
             </Col>
+            {/* RIGHT IMAGES - HIDE ON MOBILE */}
 
-            {/* RIGHT IMAGES */}
-            <Col lg={6}>
+            <Col md={6} className="d-none d-md-block">
               <Row className="g-3">
                 {/* BIG IMAGE */}
-                <Col xs={12} lg={7}>
+                <Col xs={12} md={7}>
                   <img
                     src={imgMain}
                     alt="Team working"
                     className="w-100 d-block"
                     style={{
+                      height: "100%",
                       minHeight: "260px",
                       borderRadius: "20px",
                       objectFit: "cover",
@@ -76,38 +77,48 @@ function WhyStaffHaven() {
                 </Col>
 
                 {/* STACKED IMAGES */}
-                {/* ONLY VISIBLE ON DESKTOP */}
-                <div className="d-none d-lg-block">
-                  <Col lg={5} className="d-flex flex-column gap-3">
-                    <img
-                      src={imgTop}
-                      alt="Team 1"
-                      className="w-100"
-                      style={{
-                        minHeight: "125px",
-                        borderRadius: "20px",
-                        objectFit: "cover",
-                      }}
-                    />
-                    <img
-                      src={imgBottom}
-                      alt="Team 2"
-                      className="w-100"
-                      style={{
-                        minHeight: "125px",
-                        borderRadius: "20px",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Col>
-                </div>
+                <Col xs={12} md={5} className="d-flex flex-column gap-3">
+                  <img
+                    src={imgTop}
+                    alt="Team 1"
+                    className="w-100"
+                    style={{
+                      minHeight: "125px",
+                      borderRadius: "20px",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <img
+                    src={imgBottom}
+                    alt="Team 2"
+                    className="w-100"
+                    style={{
+                      minHeight: "125px",
+                      borderRadius: "20px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Col>
               </Row>
+            </Col>
+
+            <Col xs={12} className="d-block d-md-none">
+              <img
+                src={imgMain}
+                alt="Team working"
+                className="w-100 d-block"
+                style={{
+                  height: "100%",
+                  minHeight: "260px",
+                  borderRadius: "20px",
+                  objectFit: "cover",
+                }}
+              />
             </Col>
           </Row>
         </Container>
       </section>
 
-      {/* BOTTOM STRIP */}
       <div
         className="bg-primary-light-custom"
         style={{ height: "20px", width: "100%" }}
