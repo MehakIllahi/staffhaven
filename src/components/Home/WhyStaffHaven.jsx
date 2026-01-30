@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import Styles from "./Home.module.css";
 import imgMain from "../../assets/img4.jpg";
 import imgTop from "../../assets/img2.jpg";
 import imgBottom from "../../assets/img5.jpg";
@@ -48,7 +48,7 @@ function WhyStaffHaven() {
               </p>
 
               <button
-                className="btn mt-4 px-5 py-2 fw-semibold"
+                className={`btn mt-4 px-5 py-2 fw-semibold ${Styles.homerevpagebtn}`}
                 style={{
                   backgroundColor: "white",
                   borderRadius: "999px",
@@ -57,11 +57,10 @@ function WhyStaffHaven() {
                 About Us
               </button>
             </Col>
-            {/* RIGHT IMAGES - HIDE ON MOBILE */}
 
-            <Col md={6} className="d-none d-md-block">
+            {/* DESKTOP IMAGES */}
+            <Col md={6} className="d-none d-lg-block">
               <Row className="g-3">
-                {/* BIG IMAGE */}
                 <Col xs={12} md={7}>
                   <img
                     src={imgMain}
@@ -76,7 +75,6 @@ function WhyStaffHaven() {
                   />
                 </Col>
 
-                {/* STACKED IMAGES */}
                 <Col xs={12} md={5} className="d-flex flex-column gap-3">
                   <img
                     src={imgTop}
@@ -102,7 +100,23 @@ function WhyStaffHaven() {
               </Row>
             </Col>
 
-            <Col xs={12} className="d-block d-md-none">
+            {/* TABLET IMAGE BELOW CONTENT */}
+            <Col md={6} className="d-none d-md-block d-lg-none mt-4">
+              <img
+                src={imgMain}
+                alt="Team working"
+                className="w-100 d-block"
+                style={{
+                  height: "100%",
+                  minHeight: "260px",
+                  borderRadius: "20px",
+                  objectFit: "cover",
+                }}
+              />
+            </Col>
+
+            {/* MOBILE IMAGE BELOW CONTENT */}
+            <Col xs={12} className="d-block d-md-none mt-4">
               <img
                 src={imgMain}
                 alt="Team working"

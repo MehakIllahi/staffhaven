@@ -7,6 +7,7 @@
 .homerevpagebtn:hover {
   background-color: #004952 !important;
   color: white !important;
+  border-radius: 999px !important;
   border: 2px solid white !important;
 }
 

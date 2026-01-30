@@ -2,6 +2,7 @@ import secondImage from "../../assets/img12.jpg";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
 import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
 import React, { useState, useEffect } from "react";
+import Styles from "./Hiretalent.module.css";
 export function TimeToWasteSection() {
   const [showTalk, setShowTalk] = useState(false);
   return (
@@ -40,7 +41,7 @@ export function TimeToWasteSection() {
             </p>
 
             <button
-              className="bg-primary-custom rounded-pill px-4 py-2"
+              className={`bg-primary-custom rounded-pill px-4 py-2 ${Styles.homepagebtn}`}
               onClick={() => setShowTalk(true)}
             >
               Get in touch →

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import solutionImage from "../../assets/img9.jpg";
 import ProgressiveImage from "../Imageloader/ProgressiveImage";
 import TalkToUsOffcanvas from "../common/TalkToUsOffcanvas";
-
+import Styles from "./Hiretalent.module.css";
 export function SolutionSection() {
   const [showTalk, setShowTalk] = useState(false);
 
@@ -41,7 +41,7 @@ export function SolutionSection() {
             </p>
 
             <button
-              className="bg-primary-custom rounded-pill px-4 py-2"
+              className={`bg-primary-custom rounded-pill px-4 py-2 ${Styles.homepagebtn}`}
               onClick={() => setShowTalk(true)}
             >
               Get in touch →

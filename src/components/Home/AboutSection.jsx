@@ -4,7 +4,7 @@ import ProgressiveImage from "../Imageloader/ProgressiveImage";
 import officeImg from "../../assets/img3.jpg";
 import peopleImg from "../../assets/img7.jpg";
 import { Link } from "react-router-dom";
-
+import Styles from "./Home.module.css";
 function AboutSection() {
   return (
     <section style={{ padding: "4rem 0 5rem" }}>
@@ -44,7 +44,7 @@ function AboutSection() {
             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start mt-4">
               <Link to="/about" className="text-decoration-none">
                 <button
-                  className="w-100 w-sm-auto"
+                  className={`w-100 w-sm-auto ${Styles.homepagebtn}`}
                   style={{
                     padding: "0.9rem 1.9rem",
                     borderRadius: "999px",
@@ -58,9 +58,9 @@ function AboutSection() {
                 </button>
               </Link>
 
-              <Link to="/hire-talent" className="text-decoration-none">
+              <Link to="/hire-talent" className={`text-decoration-none `}>
                 <button
-                  className="w-100 w-sm-auto"
+                  className={`w-100 w-sm-auto ${Styles.homerevpagebtn}`}
                   style={{
                     padding: "0.9rem 1.9rem",
                     borderRadius: "999px",
