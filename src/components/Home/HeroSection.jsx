@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import bannerimg from "/bannerimg2.jpg";
 import { Link } from "react-router-dom";
 import Styles from "./Home.module.css";
 
@@ -10,15 +9,22 @@ function HeroSection() {
       fluid
       className="p-0"
       style={{
-        backgroundImage: `url(${bannerimg})`,
+        backgroundImage: `url(/bannerimg2.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-
-        backgroundBlendMode: "multiply", // magic for blending
+        backgroundBlendMode: "multiply",
       }}
     >
-      {/* Optional: add an extra overlay to darken/lighten */}
+      {/* Preload hint: tell the browser to fetch the hero image ASAP */}
+      <link
+        rel="preload"
+        as="image"
+        href="/bannerimg2.jpg"
+        // eslint-disable-next-line react/no-unknown-property
+        fetchpriority="high"
+      />
+
       <div
         style={{
           background: "rgba(0, 0, 0, 0.35)",
@@ -26,7 +32,7 @@ function HeroSection() {
           height: "100%",
         }}
       >
-        <Container className="py-5 ">
+        <Container className="py-5">
           <Row className="align-items-center text-center">
             <Col sm={3}></Col>
             <Col sm={6}>
@@ -54,9 +60,6 @@ function HeroSection() {
               </Link>
             </Col>
             <Col sm={3}></Col>
-
-            {/* If you still want a separate image on right, you can keep this Col or remove it */}
-            {/* <Col sm={6}></Col> */}
           </Row>
         </Container>
       </div>
